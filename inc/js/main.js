@@ -1,6 +1,8 @@
 
 let tabs = document.querySelectorAll(".tabs-div");
 let tabsdetails = document.querySelectorAll(".courses-tab-details-div");
+let swipercontainers = document.querySelectorAll(".swiper-container");
+
 //let activetab;
 //let activedetails;
 
@@ -41,12 +43,23 @@ tabs.forEach(tab => {
             tabsdetail.classList.remove("active");
         });
 
+        swipercontainers.forEach(swipercontainer => {
+            swipercontainer.classList.remove("active");
+        });
+        
         let tabnumber = e.target.getAttribute("data-tab");
+
         let activetab = document.querySelector('.tab-' + tabnumber);
         activetab.classList.add("active");
 
         let activedetails = document.querySelector('.courses-tab-details-' + tabnumber);
         activedetails.classList.add("active");
+
+        let activeswipercontainer = document.querySelector('.video-container-' + tabnumber);
+        activeswipercontainer.classList.add("active");
+
+
+
     })
 });
 

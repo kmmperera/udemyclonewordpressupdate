@@ -267,6 +267,14 @@ body{
     justify-content: space-between;
     padding: 0px 8px;
 }
+.swiper-container .prev-arrow{
+    left: 32px;
+  
+}
+.swiper-container .next-arrow{
+    right: 32px;
+   
+}
 .hero-custom-button-prev , .hero-custom-button-next , .arrow-buttons-style{
     border: 1px solid #6a6f73;
     height: 48px;
@@ -361,6 +369,7 @@ body{
 }
 .courses-text p{
     font-size: 18px;
+    margin-bottom: 12px;
 }
 .courses-tabs{
     height: 48px;
@@ -381,15 +390,53 @@ body{
 .courses-tab-details-div{
     display: none;
     position: relative;
+    border: 1px solid black;
+    border-bottom: none;
+    padding: 32px;
+    margin-top: 12px;
+    padding-bottom: 0px;
 }
+.courses-tab-details-div h2{
 
+    margin-bottom: 16px;
+}
+.courses-tab-details-div p{
+
+    margin-bottom: 16px;
+}
+.courses-tab-details-div .explore-btn{
+
+    
+}
+.courses-tab-details-div .explore-btn a{
+
+   text-decoration: none;
+
+}
+.courses-wrapper > .swiper-container{
+    display: none;  
+    border: 1px solid black;
+    border-top: none;
+    padding: 32px;
+   
+
+
+}
+.courses-wrapper > .swiper-container.active{
+    display: block;
+}
 .courses-tab-details-div.active{
     display: block;
 }
 .tabs-div{
     font-size: 15px;
     font-weight: 700;
+    display: inline-block;
+    margin-right: 20px;
+    color: #6a6f73;
+    cursor: pointer;
 }
+
 .tabs-div.active{
     color:#2d2f31;
 }

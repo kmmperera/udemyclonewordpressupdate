@@ -21,7 +21,7 @@ function load_css()
     wp_register_style('ewtgooglefontscss', 'https://fonts.googleapis.com/css2?family=Assistant:wght@500;600;700;800&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap', false);
     wp_enqueue_style('ewtgooglefontscss');
 
-    wp_register_script('mainjs', get_template_directory_uri() . '/inc/js/main.js', array('jquery'), '1.0.16', true);
+    wp_register_script('mainjs', get_template_directory_uri() . '/inc/js/main.js', array('jquery'), '1.0.20', true);
     wp_enqueue_script('mainjs');
 
     wp_register_script('swiperjscdn', 'https://unpkg.com/swiper/swiper-bundle.min.js', '1.0.16', true);
@@ -676,10 +676,10 @@ class ewt_Tabs_Slider_Videos extends WP_Widget
         }
         $args['after_widget'] = '       </div> 
                                     </div> 
-                                    <div class="courses-'. $subject_number.'-custom-button-prev arrow-buttons-style">
+                                    <div class="courses-'. $subject_number.'-custom-button-prev arrow-buttons-style prev-arrow">
                                     <i class="fa-solid fa-chevron-left"></i>
                                     </div>
-                                    <div class="courses-'. $subject_number.'-custom-button-next arrow-buttons-style">
+                                    <div class="courses-'. $subject_number.'-custom-button-next arrow-buttons-style next-arrow">
                                     <i class="fa-solid fa-chevron-right"></i>
                                      </div>
                                 </div>';

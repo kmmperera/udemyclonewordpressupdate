@@ -1,4 +1,4 @@
-<?php get_header();?>
+<?php get_header(); ?>
     
 <div class="main">
         <div class="hero-section">
@@ -7,7 +7,7 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="hero-image">
-                                <img src="<?php echo get_template_directory_uri().'/assets/image/hero-one.jpg'?>"   alt="">
+                                <img src="<?php echo get_template_directory_uri() . '/assets/image/hero-one.jpg' ?>"   alt="">
                             </div>
                             <div class="hero-text">
                                 <h1>Join us Now
@@ -22,7 +22,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="hero-image">
-                                <img src="<?php echo get_template_directory_uri().'/assets/image/hero-two.jpg'?>"     alt="">
+                                <img src="<?php echo get_template_directory_uri() . '/assets/image/hero-two.jpg' ?>"     alt="">
                             </div>
                             <div class="hero-text">
                                 <h1>Flash Sale on now
@@ -39,7 +39,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="hero-image">
-                                <img src="<?php echo get_template_directory_uri().'/assets/image/hero-three.jpg'?>"   alt="">
+                                <img src="<?php echo get_template_directory_uri() . '/assets/image/hero-three.jpg' ?>"   alt="">
                             </div>
                             <div class="hero-text">
                                 <h1>
@@ -84,26 +84,26 @@
                 </div>
                 <div class="badgers-images">
                     <div class="badger-one">
-                        <img src="<?php echo get_template_directory_uri().'/assets/image/row-one.png'?>" alt="">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/image/row-one.png' ?>" alt="">
                     </div>
                     <div class="badger-one">
-                        <img src="<?php echo get_template_directory_uri().'/assets/image/row-two.png'?>" alt="">
-                    </div>
-
-                    <div class="badger-one">
-                        <img src="<?php echo get_template_directory_uri().'/assets/image/row-three.png'?>" alt="">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/image/row-two.png' ?>" alt="">
                     </div>
 
                     <div class="badger-one">
-                        <img src="<?php echo get_template_directory_uri().'/assets/image/row-four.png'?>" alt="">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/image/row-three.png' ?>" alt="">
                     </div>
 
                     <div class="badger-one">
-                        <img src="<?php echo get_template_directory_uri().'/assets/image/row-five.png'?>" alt="">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/image/row-four.png' ?>" alt="">
                     </div>
 
                     <div class="badger-one">
-                        <img src="<?php echo get_template_directory_uri().'/assets/image/row-six.jpg'?>" alt="">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/image/row-five.png' ?>" alt="">
+                    </div>
+
+                    <div class="badger-one">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/image/row-six.jpg' ?>" alt="">
                     </div>
 
 
@@ -119,543 +119,11 @@
                     </p>
 
                 </div>
-                <div class="courses-tabs">
-                    <div class="tabs-div tab-one active" data-tab="one">
-                        Arts
-                    </div>
-                    <div class="tabs-div tab-two" data-tab="two">
-                        Maths
-                    </div>
-
-                    <div class="tabs-div tab-three" data-tab="three">
-                        Commerce
-                    </div>
-
-                    <div class="tabs-div tab-four" data-tab="four">
-                        Bio
-                    </div>
-
-                    <div class="tabs-div tab-five" data-tab="five">
-                        Others
-                    </div>
-
-                </div>
-                <div class="courses-tab-details">
-                    <div class="courses-tab-details-div courses-tab-details-one active" data-details="one">
-                        <div class="courses-tab-descriptions">
-                            <h2>
-                                Expand your career opportunities with Arts
-
-                            </h2>
-                            <p>
-                                Take one of Udemy’s range of Python courses and learn how to code using this incredibly useful language. Its simple syntax
-                                and readability makes Python perfect for Flask, Django, data science, and machine learning.
-                                You’ll learn how to build everything from games to sites to apps. Choose from a range of
-                                courses that will appeal to both beginners and advanced developers alike.
-
-
-                            </p>
-                            <div class="explore-btn">
-                                Explore Maths
-                            </div>
-                        </div>
-                        <div class="swiper-container">
-                            <div class="swiper courses-swiper-one">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="courses-card">
-                                            <iframe src="https://www.youtube.com/embed/Tfn3cCcE5hQ"></iframe>
-                                            <div class="course-title">
-                                                <h3> සිංහල නව විෂය නිර්දේශය හදුන්වා දීම</h3>
-
-                                            </div>
-                                            <div class="course-auther">
-                                                <p> Chathurika Dabare </p>
-                                            </div>
-
-                                            <div class="course-price">
-                                                <h4>1000 Rs per 2 hours </h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="courses-card">
-                                            <iframe src="https://www.youtube.com/embed/Tfn3cCcE5hQ"></iframe>
-                                            <div class="course-title">
-                                                <h3> සිංහල නව විෂය නිර්දේශය හදුන්වා දීම</h3>
-
-                                            </div>
-                                            <div class="course-auther">
-                                                <p> Chathurika Dabare </p>
-                                            </div>
-
-                                            <div class="course-price">
-                                                <h4>1000 Rs per 2 hours </h4>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="courses-card">
-                                            <iframe src="https://www.youtube.com/embed/Tfn3cCcE5hQ"></iframe>
-                                            <div class="course-title">
-                                                <h3> සිංහල නව විෂය නිර්දේශය හදුන්වා දීම</h3>
-
-                                            </div>
-                                            <div class="course-auther">
-                                                <p> Chathurika Dabare </p>
-                                            </div>
-
-                                            <div class="course-price">
-                                                <h4>1000 Rs per 2 hours </h4>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="courses-card">
-                                            <iframe src="https://www.youtube.com/embed/Tfn3cCcE5hQ"></iframe>
-                                            <div class="course-title">
-                                                <h3> සිංහල නව විෂය නිර්දේශය හදුන්වා දීම</h3>
-
-                                            </div>
-                                            <div class="course-auther">
-                                                <p> Chathurika Dabare </p>
-                                            </div>
-
-                                            <div class="course-price">
-                                                <h4>1000 Rs per 2 hours </h4>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="courses-card">
-                                            <iframe src="https://www.youtube.com/embed/Tfn3cCcE5hQ"></iframe>
-                                            <div class="course-title">
-                                                <h3> සිංහල නව විෂය නිර්දේශය හදුන්වා දීම</h3>
-
-                                            </div>
-                                            <div class="course-auther">
-                                                <p> Chathurika Dabare </p>
-                                            </div>
-
-                                            <div class="course-price">
-                                                <h4>1000 Rs per 2 hours </h4>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="courses-card">
-                                            <iframe src="https://www.youtube.com/embed/Tfn3cCcE5hQ"></iframe>
-                                            <div class="course-title">
-                                                <h3> සිංහල නව විෂය නිර්දේශය හදුන්වා දීම</h3>
-
-                                            </div>
-                                            <div class="course-auther">
-                                                <p> Chathurika Dabare </p>
-                                            </div>
-
-                                            <div class="course-price">
-                                                <h4>1000 Rs per 2 hours </h4>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="courses-card">
-                                            <iframe src="https://www.youtube.com/embed/Tfn3cCcE5hQ"></iframe>
-                                            <div class="course-title">
-                                                <h3> සිංහල නව විෂය නිර්දේශය හදුන්වා දීම</h3>
-
-                                            </div>
-                                            <div class="course-auther">
-                                                <p> Chathurika Dabare </p>
-                                            </div>
-
-                                            <div class="course-price">
-                                                <h4>1000 Rs per 2 hours </h4>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="courses-card">
-                                            <iframe src="https://www.youtube.com/embed/Tfn3cCcE5hQ"></iframe>
-                                            <div class="course-title">
-                                                <h3> සිංහල නව විෂය නිර්දේශය හදුන්වා දීම</h3>
-
-                                            </div>
-                                            <div class="course-auther">
-                                                <p> Chathurika Dabare </p>
-                                            </div>
-
-                                            <div class="course-price">
-                                                <h4>1000 Rs per 2 hours </h4>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-
-                            </div>
-                            <div class="courses-one-custom-button-prev arrow-buttons-style">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </div>
-                            <div class="courses-one-custom-button-next arrow-buttons-style">
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <div class="courses-tab-details-div  courses-tab-details-two" data-details="two">
-                        <div class="courses-tab-descriptions">
-                            <h2>
-                                Expand your career opportunities with Maths
-
-                            </h2>
-                            <p>
-                                Take one of Udemy’s range of Python courses and learn how to code using this incredibly useful language. Its simple syntax
-                                and readability makes Python perfect for Flask, Django, data science, and machine learning.
-                                You’ll learn how to build everything from games to sites to apps. Choose from a range of
-                                courses that will appeal to both beginners and advanced developers alike.
-
-
-                            </p>
-                            <div class="explore-btn">
-                                Explore Maths
-                            </div>
-                        </div>
-                        <div class="swiper-container">
-                            <div class="swiper courses-swiper-two">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="courses-card">
-                                            <iframe src="https://www.youtube.com/embed/Tfn3cCcE5hQ"></iframe>
-                                            <div class="course-title">
-                                                <h3> සිංහල නව විෂය නිර්දේශය හදුන්වා දීම</h3>
-
-                                            </div>
-                                            <div class="course-auther">
-                                                <p> Chathurika Dabare </p>
-                                            </div>
-
-                                            <div class="course-price">
-                                                <h4>1000 Rs per 2 hours </h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="courses-card">
-                                            <iframe src="https://www.youtube.com/embed/Tfn3cCcE5hQ"></iframe>
-                                            <div class="course-title">
-                                                <h3> සිංහල නව විෂය නිර්දේශය හදුන්වා දීම</h3>
-
-                                            </div>
-                                            <div class="course-auther">
-                                                <p> Chathurika Dabare </p>
-                                            </div>
-
-                                            <div class="course-price">
-                                                <h4>1000 Rs per 2 hours </h4>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="courses-card">
-                                            <iframe src="https://www.youtube.com/embed/Tfn3cCcE5hQ"></iframe>
-                                            <div class="course-title">
-                                                <h3> සිංහල නව විෂය නිර්දේශය හදුන්වා දීම</h3>
-
-                                            </div>
-                                            <div class="course-auther">
-                                                <p> Chathurika Dabare </p>
-                                            </div>
-
-                                            <div class="course-price">
-                                                <h4>1000 Rs per 2 hours </h4>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="courses-card">
-                                            <iframe src="https://www.youtube.com/embed/Tfn3cCcE5hQ"></iframe>
-                                            <div class="course-title">
-                                                <h3> සිංහල නව විෂය නිර්දේශය හදුන්වා දීම</h3>
-
-                                            </div>
-                                            <div class="course-auther">
-                                                <p> Chathurika Dabare </p>
-                                            </div>
-
-                                            <div class="course-price">
-                                                <h4>1000 Rs per 2 hours </h4>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="courses-card">
-                                            <iframe src="https://www.youtube.com/embed/Tfn3cCcE5hQ"></iframe>
-                                            <div class="course-title">
-                                                <h3> සිංහල නව විෂය නිර්දේශය හදුන්වා දීම</h3>
-
-                                            </div>
-                                            <div class="course-auther">
-                                                <p> Chathurika Dabare </p>
-                                            </div>
-
-                                            <div class="course-price">
-                                                <h4>1000 Rs per 2 hours </h4>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="courses-card">
-                                            <iframe src="https://www.youtube.com/embed/Tfn3cCcE5hQ"></iframe>
-                                            <div class="course-title">
-                                                <h3> සිංහල නව විෂය නිර්දේශය හදුන්වා දීම</h3>
-
-                                            </div>
-                                            <div class="course-auther">
-                                                <p> Chathurika Dabare </p>
-                                            </div>
-
-                                            <div class="course-price">
-                                                <h4>1000 Rs per 2 hours </h4>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="courses-card">
-                                            <iframe src="https://www.youtube.com/embed/Tfn3cCcE5hQ"></iframe>
-                                            <div class="course-title">
-                                                <h3> සිංහල නව විෂය නිර්දේශය හදුන්වා දීම</h3>
-
-                                            </div>
-                                            <div class="course-auther">
-                                                <p> Chathurika Dabare </p>
-                                            </div>
-
-                                            <div class="course-price">
-                                                <h4>1000 Rs per 2 hours </h4>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="courses-card">
-                                            <iframe src="https://www.youtube.com/embed/Tfn3cCcE5hQ"></iframe>
-                                            <div class="course-title">
-                                                <h3> සිංහල නව විෂය නිර්දේශය හදුන්වා දීම</h3>
-
-                                            </div>
-                                            <div class="course-auther">
-                                                <p> Chathurika Dabare </p>
-                                            </div>
-
-                                            <div class="course-price">
-                                                <h4>1000 Rs per 2 hours </h4>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-
-                            </div>
-                            <div class="courses-two-custom-button-prev arrow-buttons-style">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </div>
-                            <div class="courses-two-custom-button-next arrow-buttons-style">
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="courses-tab-details-div  courses-tab-details-three" data-details="three">
-                        <div class="swiper courses-swiper-three">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="courses-card">
-                                        one
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="courses-card">
-                                        two
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="courses-card">
-                                        three
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="courses-card">
-                                        four
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="courses-card">
-                                        five
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="courses-card">
-                                        six
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="courses-card">
-                                        seven
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="courses-card">
-                                        eight
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="">
-                                <div class="courses-three-custom-button-prev">
-                                    <i class="">Previous</i>
-                                </div>
-                                <div class="courses-three-custom-button-next">
-                                    <i class="">Next</i>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="courses-tab-details-div  courses-tab-details-four" data-details="four">
-                        <div class="swiper courses-swiper-four">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="courses-card">
-                                        one
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="courses-card">
-                                        two
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="courses-card">
-                                        three
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="courses-card">
-                                        four
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="courses-card">
-                                        five
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="courses-card">
-                                        six
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="courses-card">
-                                        seven
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="courses-card">
-                                        eight
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="">
-                                <div class="courses-four-custom-button-prev">
-                                    <i class="">Previous</i>
-                                </div>
-                                <div class="courses-four-custom-button-next">
-                                    <i class="">Next</i>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="courses-tab-details-div  courses-tab-details-five" data-details="five">
-                        <div class="swiper courses-swiper-five">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="courses-card">
-                                        one
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="courses-card">
-                                        two
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="courses-card">
-                                        three
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="courses-card">
-                                        four
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="courses-card">
-                                        five
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="courses-card">
-                                        six
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="courses-card">
-                                        seven
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="courses-card">
-                                        eight
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="">
-                                <div class="courses-five-custom-button-prev">
-                                    <i class="">Previous</i>
-                                </div>
-                                <div class="courses-five-custom-button-next">
-                                    <i class="">Next</i>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
+                <?php if (is_active_sidebar('ewt-tabs-sidebar-widget')) : ?>
+                        
+                        <?php dynamic_sidebar('ewt-tabs-sidebar-widget'); ?>
+
+                <?php endif; ?>
             </div>
         </div>
         <div class="reviews-section">
@@ -1172,7 +640,7 @@
             <div class="more-info-wrapper">
                 <div class="more-info-left">
                     <div class="more-info-logo">
-                        <img src="<?php echo get_template_directory_uri().'/assets/image/logo.png'?>" alt="">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/image/logo.png' ?>" alt="">
                     </div>
                     <h1>
                         Upskill your team with Us
@@ -1206,7 +674,7 @@
 
                 </div>
                 <div class="more-info-right">
-                    <img src="<?php echo get_template_directory_uri().'/assets/image/more-info.jpg'?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/image/more-info.jpg' ?>" alt="">
                 </div>
             </div>
         </div>
@@ -1220,7 +688,7 @@
                             <div class="swiper-slide">
                                 <div class="team-member">
                                     <div class="team-member-img">
-                                        <img src="<?php echo get_template_directory_uri().'/assets/image/ayomi.jpg'?>" alt="">
+                                        <img src="<?php echo get_template_directory_uri() . '/assets/image/ayomi.jpg' ?>" alt="">
                                     </div>
                                     <div class="team-member-name">
                                         Ayomi
@@ -1240,7 +708,7 @@
                             <div class="swiper-slide">
                                 <div class="team-member">
                                     <div class="team-member-img">
-                                        <img src="<?php echo get_template_directory_uri().'/assets/image/ayomi.jpg'?>" alt="">
+                                        <img src="<?php echo get_template_directory_uri() . '/assets/image/ayomi.jpg' ?>" alt="">
                                     </div>
                                     <div class="team-member-name">
                                         Ayomi
@@ -1260,7 +728,7 @@
                             <div class="swiper-slide">
                                 <div class="team-member">
                                     <div class="team-member-img">
-                                        <img src="<?php echo get_template_directory_uri().'/assets/image/ayomi.jpg'?>" alt="">
+                                        <img src="<?php echo get_template_directory_uri() . '/assets/image/ayomi.jpg' ?>" alt="">
                                     </div>
                                     <div class="team-member-name">
                                         Ayomi
@@ -1280,7 +748,7 @@
                             <div class="swiper-slide">
                                 <div class="team-member">
                                     <div class="team-member-img">
-                                        <img src="<?php echo get_template_directory_uri().'/assets/image/ayomi.jpg'?>" alt="">
+                                        <img src="<?php echo get_template_directory_uri() . '/assets/image/ayomi.jpg' ?>" alt="">
                                     </div>
                                     <div class="team-member-name">
                                         Ayomi
@@ -1300,7 +768,7 @@
                             <div class="swiper-slide">
                                 <div class="team-member">
                                     <div class="team-member-img">
-                                        <img src="<?php echo get_template_directory_uri().'/assets/image/ayomi.jpg'?>" alt="">
+                                        <img src="<?php echo get_template_directory_uri() . '/assets/image/ayomi.jpg' ?>" alt="">
                                     </div>
                                     <div class="team-member-name">
                                         Ayomi
@@ -1341,7 +809,7 @@
         <div class="join-us-section">
             <div class="join-us-wrapper">
                 <div class="join-us-left">
-                    <img src="<?php echo get_template_directory_uri().'/assets/image/join-us.jpg'?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/image/join-us.jpg' ?>" alt="">
                 </div>
                 <div class="join-us-right">
                     <h1>
@@ -1363,4 +831,4 @@
     </div>
 
 
-<?php get_footer();?>
+<?php get_footer(); ?>

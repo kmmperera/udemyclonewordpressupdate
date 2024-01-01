@@ -56,31 +56,8 @@
 
 
 
-                  <div class="swiper-container">
-                            <div class="swiper courses-swiper-one">
-                                <div class="swiper-wrapper">
-                                    
-                                            <?php if (is_active_sidebar('ewt-courses-slider-one-widget')) : ?>
-                        
-                                             <?php dynamic_sidebar('ewt-courses-slider-one-widget'); ?>
-
-                                             <?php endif; ?>
-
-                                     
-                                </div>
-                            </div>
-
-                            <div class="courses-one-custom-button-prev arrow-buttons-style">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </div>
-                            <div class="courses-one-custom-button-next arrow-buttons-style">
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </div>
-                  </div>
-        <div class="courses-one-widget-div">
-              
-
-        </div>
+                 
+        
         <div class="tabs-widget-test">
         
         <?php if (is_active_sidebar('ewt-tabs-sidebar-widget')) : ?>
