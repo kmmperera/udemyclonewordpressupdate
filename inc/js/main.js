@@ -204,7 +204,7 @@ swiperCoursesOne.on('slideChange', function() {
     let realIndex = swiperCoursesOne.realIndex;
     if (realIndex == 0) {
      
-        document.querySelector(" .courses-one-custom-button-prev").style.display = "none";
+        document.querySelector(".courses-one-custom-button-prev").style.display = "none";
     } else {
      
       document.querySelector(".courses-one-custom-button-prev").style.display = "block";
