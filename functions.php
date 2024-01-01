@@ -146,6 +146,20 @@ function my_sidebars()
 
     );
 
+    register_sidebar(
+
+        array(
+
+            'name' => 'Reviews Area',
+            'id' => 'ewt-reviews-sidebar-widget',
+
+
+
+
+        )
+
+    );
+
 
 }
 
@@ -1049,3 +1063,136 @@ function ewt_load_tabs_slider_videos_widget()
 add_action('widgets_init', 'ewt_load_tabs_slider_videos_widget');
 
 
+
+class ewt_Reviews extends WP_Widget
+{
+
+    function __construct()
+    {
+        parent::__construct(
+         
+        // Base ID of your widget
+            'ewt_reviews_widget', 
+         
+        // Widget name will appear in UI
+            __('Reviews Widget', 'ElegantWUni'), 
+         
+        // Widget description
+            array('description' => __('Tabs widget for dispaly reviews slider', 'ElegantWUni'), )
+        );
+    }
+         
+        // Creating widget front-end
+
+    public function widget($args, $instance)
+    {
+        $review_paragrapgh = apply_filters('widget_title', $instance['review_paragrapgh']);
+        $review_author_name = apply_filters('widget_title', $instance['review_author_name']);
+        $review_author_image = apply_filters('widget_title', $instance['review_author_image']);
+        $review_link = apply_filters('widget_title', $instance['review_link']);
+
+       
+         $args['before_widget'] = '<div class="swiper-slide">
+                                         <div class="card reviews-slider-card">';
+       
+           
+          
+       
+        $args['after_widget'] = '</div></div>';
+        // before and after widget arguments are defined by themes
+        echo $args['before_widget'];
+        if (!empty($review_paragrapgh)){ 
+            echo ' <div class="reviews-slide-part-one">
+                         <i class="fa-solid fa-quote-left"></i>
+                         <p>'.$review_paragrapgh.' </p>
+                  </div>';
+        }
+        // This is where you run the code and display the output
+        if (!empty($review_author_name) && !empty($review_author_image)){ 
+            echo ' <div class="reviews-slide-part-two">
+                        <p class="review-author-details">
+                             <span class="name-avatar"><img src="'.$review_author_image.'"> </span>
+                            <span class="rivewer-name">'.$review_author_name.'</span>
+                        </p>
+                 </div>';
+        }
+
+        if (!empty($review_link) ){ 
+            echo '<div class="reviews-slide-part-three">
+
+                    <span class="play-icon">
+                        <i class="fa-solid fa-play"></i>
+                    </span>
+                    <a class="part-three-texts" href=" '.$review_link.' ">Learn More</a>
+
+                </div>';
+        }
+
+
+        echo $args['after_widget'];
+    }
+         
+        // Widget Backend
+    public function form($instance)
+    {
+        
+        $review_paragrapgh = !empty($instance['review_paragrapgh']) ? $instance['review_paragrapgh'] : 'Write a review';
+        $review_author_name = !empty($instance['review_author_name']) ? $instance['review_author_name'] : '';
+        $review_author_image = !empty($instance['review_author_image']) ? $instance['review_author_image'] : '';
+        $review_link = !empty($instance['review_link']) ? $instance['review_link'] : '';
+
+    
+        // Widget admin form
+        ?>
+        <p>
+        <label for="<?php echo $this->get_field_id('review_paragrapgh'); ?>"><?php _e('Review Pargraph:'); ?></label>
+        <input class="widefat" id="<?php echo $this->get_field_id('review_paragrapgh'); ?>" name="<?php echo $this->get_field_name('review_paragrapgh'); ?>" type="text" value="<?php echo esc_attr($review_paragrapgh); ?>" />
+        </p>
+    
+         <p>
+            <label for="<?php echo $this->get_field_id('review_author_name'); ?>"><?php _e('Author name:'); ?></label>
+            <input class="widefat" id="<?php echo $this->get_field_id('review_author_name'); ?>" name="<?php echo $this->get_field_name('review_author_name'); ?>" type="text" value="<?php echo esc_attr($review_author_name); ?>" />
+         </p>
+
+        <p>
+	        <label for="<?php echo esc_attr($this->get_field_id('review_author_image')); ?>"><?php esc_attr_e('Image:', 'ElegantWUni'); ?></label> 
+		    <input class="widefat image-upload" id="<?php echo esc_attr($this->get_field_id('review_author_image')); ?>" name="<?php echo esc_attr($this->get_field_name('review_author_image')); ?>" type="text" value="<?php echo esc_url($review_author_image); ?>">
+		    <button type="button" class="button button-primary js-image-upload">Select Image</button>
+	    </p>
+
+        <p>
+            <label for="<?php echo $this->get_field_id('review_link'); ?>"><?php _e('Link:'); ?></label>
+            <input class="widefat" id="<?php echo $this->get_field_id('review_link'); ?>" name="<?php echo $this->get_field_name('review_link'); ?>" type="text" value="<?php echo esc_attr($review_link); ?>" />
+         </p>
+
+    
+    
+       
+    
+        <?php
+
+    }
+         
+        // Updating widget replacing old instances with new
+    public function update($new_instance, $old_instance)
+    {
+        $instance = array();
+        $instance['review_paragrapgh'] = (!empty($new_instance['review_paragrapgh'])) ? strip_tags($new_instance['review_paragrapgh']) : '';
+        $instance['review_author_name'] = (!empty($new_instance['review_author_name'])) ? $new_instance['review_author_name'] : '';
+        $instance['review_author_image'] = (!empty($new_instance['review_author_image'])) ? $new_instance['review_author_image'] : '';
+        $instance['review_link'] = (!empty($new_instance['review_link'])) ? $new_instance['review_link'] : '';
+
+
+
+        return $instance;
+    }
+         
+        // Class wpb_widget ends here
+} 
+         
+        // Register and load the widget
+function ewt_display_reviews_widget()
+{
+    register_widget('ewt_Reviews');
+}
+add_action('widgets_init', 'ewt_display_reviews_widget');
