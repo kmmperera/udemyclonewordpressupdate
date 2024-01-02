@@ -104,18 +104,7 @@ function my_sidebars()
 
     );
 
-    register_sidebar(
-
-        array(
-
-            'name' => 'Our Team',
-            'id' => 'ewt-team-widget',
-            'before_title' => '<h3 class="widget-title">',
-            'after_title' => '</h3>'
-
-        )
-
-    );
+ 
 
     register_sidebar(
 
@@ -152,6 +141,48 @@ function my_sidebars()
 
             'name' => 'Reviews Area',
             'id' => 'ewt-reviews-sidebar-widget',
+
+
+
+
+        )
+
+    );
+
+    register_sidebar(
+
+        array(
+
+            'name' => 'Learners also view Area',
+            'id' => 'ewt-more-videos-sidebar-widget',
+
+
+
+
+        )
+
+    );
+
+    register_sidebar(
+
+        array(
+
+            'name' => 'Front page Facebook widget',
+            'id' => 'ewt-front-page-fb-sidebar-widget',
+
+
+
+
+        )
+
+    );
+
+    register_sidebar(
+
+        array(
+
+            'name' => 'Our Team Area widget',
+            'id' => 'ewt-our-team-sidebar-widget',
 
 
 
@@ -265,102 +296,7 @@ function ewt_load_courses_widget()
 add_action('widgets_init', 'ewt_load_courses_widget');
 
 
-class ewt_Team extends WP_Widget
-{
 
-    function __construct()
-    {
-        parent::__construct(
-         
-        // Base ID of your widget
-            'ewt_team_widget', 
-         
-        // Widget name will appear in UI
-            __('Team Widget', 'ElegantWUni'), 
-         
-        // Widget description
-            array('description' => __('Team members widget for dispaly our team', 'ElegantWUni'), )
-        );
-    }
-         
-        // Creating widget front-end
-
-    public function widget($args, $instance)
-    {
-        $title = apply_filters('widget_title', $instance['title']);
-         
-        // before and after widget arguments are defined by themes
-        echo $args['before_widget'];
-        if (!empty($title))
-            echo $args['before_title'] . $title . $args['after_title'];
-         
-        // This is where you run the code and display the output
-
-        if (!empty($instance['image'])) {
-            echo '<img src="' . esc_url($instance['image']) . '" alt="">';
-        }
-
-        if (!empty($instance['discription'])) {
-            echo '<div class="ewt-team-discription" >' . $instance['discription'] . '</div>';
-        }
-
-        echo $args['after_widget'];
-    }
-         
-        // Widget Backend
-    public function form($instance)
-    {
-        if (isset($instance['title'])) {
-            $title = $instance['title'];
-        } else {
-            $title = __('New member', 'ElegantWUni');
-        }
-        $image = !empty($instance['image']) ? $instance['image'] : '';
-        $discription = !empty($instance['discription']) ? $instance['discription'] : '';
-
-        // Widget admin form
-        ?>
-        <p>
-        <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Member Name:'); ?></label>
-        <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" />
-        </p>
-
-        <p>
-        <label for="<?php echo $this->get_field_id('discription'); ?>"><?php _e('Discription:'); ?></label>
-        <input class="widefat" id="<?php echo $this->get_field_id('discription'); ?>" name="<?php echo $this->get_field_name('discription'); ?>" type="text" value="<?php echo esc_attr($discription); ?>" />
-        </p>
-
-    
-        <p>
-            <label for="<?php echo esc_attr($this->get_field_id('image')); ?>"><?php esc_attr_e('Image:', 'ElegantWUni'); ?></label> 
-            <input class="widefat image-upload" id="<?php echo esc_attr($this->get_field_id('image')); ?>" name="<?php echo esc_attr($this->get_field_name('image')); ?>" type="text" value="<?php echo esc_url($image); ?>">
-            <button type="button" class="button button-primary js-image-upload">Select Image</button>
-        </p>
-    
-        <?php
-
-    }
-         
-        // Updating widget replacing old instances with new
-    public function update($new_instance, $old_instance)
-    {
-        $instance = array();
-        $instance['title'] = (!empty($new_instance['title'])) ? strip_tags($new_instance['title']) : '';
-        $instance['image'] = (!empty($new_instance['image'])) ? $new_instance['image'] : '';
-        $instance['discription'] = (!empty($new_instance['discription'])) ? $new_instance['discription'] : '';
-
-        return $instance;
-    }
-         
-        // Class wpb_widget ends here
-} 
-         
-        // Register and load the widget
-function ewt_load_team_widget()
-{
-    register_widget('ewt_Team');
-}
-add_action('widgets_init', 'ewt_load_team_widget');
 
 
 
@@ -1196,3 +1132,366 @@ function ewt_display_reviews_widget()
     register_widget('ewt_Reviews');
 }
 add_action('widgets_init', 'ewt_display_reviews_widget');
+
+
+class ewt_More_videos extends WP_Widget
+{
+
+    function __construct()
+    {
+        parent::__construct(
+         
+        // Base ID of your widget
+            'ewt_more_videos_widget', 
+         
+        // Widget name will appear in UI
+            __('More Videos Widget', 'ElegantWUni'), 
+         
+        // Widget description
+            array('description' => __(' widget for dispaly more videos slider', 'ElegantWUni'), )
+        );
+    }
+         
+        // Creating widget front-end
+
+    public function widget($args, $instance)
+    {
+        $more_video_link = apply_filters('widget_title', $instance['more_video_link']);
+        $more_video_heading = apply_filters('widget_title', $instance['more_video_heading']);
+        $more_video_author = apply_filters('widget_title', $instance['more_video_author']);
+        $more_video_price = apply_filters('widget_title', $instance['more_video_price']);
+
+       
+         $args['before_widget'] = '<div class="swiper-slide">
+                                        <div class="video-cards">';
+       
+           
+          
+       
+        $args['after_widget'] = '</div></div>';
+        // before and after widget arguments are defined by themes
+        echo $args['before_widget'];
+        if (!empty($more_video_link)){ 
+            echo '  <iframe src="  '.$more_video_link . ' "></iframe>';
+        }
+        if (!empty($more_video_heading)){ 
+            echo '  <div class="course-title">
+                        <h3>'.$more_video_heading.'</h3>
+                    </div>';
+        }
+        // This is where you run the code and display the output
+        if (!empty($more_video_author) ){ 
+            echo ' <div class="course-auther">
+                         <p> '.$more_video_author.' </p>
+                </div>';
+        }
+
+        if (!empty($more_video_price) ){ 
+            echo '  <div class="course-price">
+                         <h4>'.$more_video_price.'</h4>
+                    </div>';
+        }
+
+
+        echo $args['after_widget'];
+    }
+         
+        // Widget Backend
+    public function form($instance)
+    {
+        
+        $more_video_link = !empty($instance['more_video_link']) ? $instance['more_video_link'] : '';
+        $more_video_heading = !empty($instance['more_video_heading']) ? $instance['more_video_heading'] : '';
+        $more_video_author = !empty($instance['more_video_author']) ? $instance['more_video_author'] : '';
+        $more_video_price = !empty($instance['more_video_price']) ? $instance['more_video_price'] : '';
+
+    
+        // Widget admin form
+        ?>
+        <p>
+        <label for="<?php echo $this->get_field_id('more_video_link'); ?>"><?php _e('Link:'); ?></label>
+        <input class="widefat" id="<?php echo $this->get_field_id('more_video_link'); ?>" name="<?php echo $this->get_field_name('more_video_link'); ?>" type="text" value="<?php echo esc_attr($more_video_link); ?>" />
+        </p>
+    
+         <p>
+            <label for="<?php echo $this->get_field_id('more_video_heading'); ?>"><?php _e('Heading:'); ?></label>
+            <input class="widefat" id="<?php echo $this->get_field_id('more_video_heading'); ?>" name="<?php echo $this->get_field_name('more_video_heading'); ?>" type="text" value="<?php echo esc_attr($more_video_heading); ?>" />
+         </p>
+
+        
+
+        <p>
+            <label for="<?php echo $this->get_field_id('more_video_author'); ?>"><?php _e('Author:'); ?></label>
+            <input class="widefat" id="<?php echo $this->get_field_id('more_video_author'); ?>" name="<?php echo $this->get_field_name('more_video_author'); ?>" type="text" value="<?php echo esc_attr($more_video_author); ?>" />
+         </p>
+
+         <p>
+            <label for="<?php echo $this->get_field_id('more_video_price'); ?>"><?php _e('Price:'); ?></label>
+            <input class="widefat" id="<?php echo $this->get_field_id('more_video_price'); ?>" name="<?php echo $this->get_field_name('more_video_price'); ?>" type="text" value="<?php echo esc_attr($more_video_price); ?>" />
+         </p>
+
+    
+    
+       
+    
+        <?php
+
+    }
+         
+        // Updating widget replacing old instances with new
+    public function update($new_instance, $old_instance)
+    {
+        $instance = array();
+        $instance['more_video_link'] = (!empty($new_instance['more_video_link'])) ? strip_tags($new_instance['more_video_link']) : '';
+        $instance['more_video_heading'] = (!empty($new_instance['more_video_heading'])) ? $new_instance['more_video_heading'] : '';
+        $instance['more_video_author'] = (!empty($new_instance['more_video_author'])) ? $new_instance['more_video_author'] : '';
+        $instance['more_video_price'] = (!empty($new_instance['more_video_price'])) ? $new_instance['more_video_price'] : '';
+
+
+
+        return $instance;
+    }
+         
+        // Class wpb_widget ends here
+} 
+         
+        // Register and load the widget
+function ewt_display_more_videos_widget()
+{
+    register_widget('ewt_More_videos');
+}
+add_action('widgets_init', 'ewt_display_more_videos_widget');
+
+
+
+class ewt_Fb_groups extends WP_Widget
+{
+
+    function __construct()
+    {
+        parent::__construct(
+         
+        // Base ID of your widget
+            'ewt_fb_groups_widget', 
+         
+        // Widget name will appear in UI
+            __('Facebookk grops Widget', 'ElegantWUni'), 
+         
+        // Widget description
+            array('description' => __(' widget for dispaly facebook groups', 'ElegantWUni'), )
+        );
+    }
+         
+        // Creating widget front-end
+
+    public function widget($args, $instance)
+    {
+        $fb_group_name = apply_filters('widget_title', $instance['fb_group_name']);
+        $fb_group_link = apply_filters('widget_title', $instance['fb_group_link']);
+
+        if (!empty($fb_group_link)){ 
+         $args['before_widget'] = '<a class="fb-group-link" href=" '.$fb_group_link.' "  target="_blank">';
+         $args['after_widget'] = '</a>';
+        }
+        // before and after widget arguments are defined by themes
+        echo $args['before_widget'];
+        if (!empty($fb_group_name)){ 
+            echo '  <i class="fa-brands fa-facebook-f"></i>
+                    <h4 class="fb-link-a-text">'.$fb_group_name. '</h4>
+                    <h4> සම්බන්ධවීමට Click කරන්න </h4>';
+        }
+        
+
+
+        echo $args['after_widget'];
+    }
+         
+        // Widget Backend
+    public function form($instance)
+    {
+        
+        $fb_group_name = !empty($instance['fb_group_name']) ? $instance['fb_group_name'] : 'Enter fb group name';
+        $fb_group_link = !empty($instance['fb_group_link']) ? $instance['fb_group_link'] : '';
+      
+
+    
+        // Widget admin form
+        ?>
+        <p>
+        <label for="<?php echo $this->get_field_id('fb_group_name'); ?>"><?php _e('Group Name:'); ?></label>
+        <input class="widefat" id="<?php echo $this->get_field_id('fb_group_name'); ?>" name="<?php echo $this->get_field_name('fb_group_name'); ?>" type="text" value="<?php echo esc_attr($fb_group_name); ?>" />
+        </p>
+    
+         <p>
+            <label for="<?php echo $this->get_field_id('fb_group_link'); ?>"><?php _e('Link:'); ?></label>
+            <input class="widefat" id="<?php echo $this->get_field_id('fb_group_link'); ?>" name="<?php echo $this->get_field_name('fb_group_link'); ?>" type="text" value="<?php echo esc_attr($fb_group_link); ?>" />
+         </p>
+
+        
+        <?php
+
+    }
+         
+        // Updating widget replacing old instances with new
+    public function update($new_instance, $old_instance)
+    {
+        $instance = array();
+        $instance['fb_group_name'] = (!empty($new_instance['fb_group_name'])) ? strip_tags($new_instance['fb_group_name']) : '';
+        $instance['fb_group_link'] = (!empty($new_instance['fb_group_link'])) ? $new_instance['fb_group_link'] : '';
+        
+
+
+        return $instance;
+    }
+         
+        // Class wpb_widget ends here
+} 
+         
+        // Register and load the widget
+function ewt_display_fb_groups_widget()
+{
+    register_widget('ewt_Fb_groups');
+}
+add_action('widgets_init', 'ewt_display_fb_groups_widget');
+
+
+
+
+class ewt_Our_team extends WP_Widget
+{
+
+    function __construct()
+    {
+        parent::__construct(
+         
+        // Base ID of your widget
+            'ewt_our_team_widget', 
+         
+        // Widget name will appear in UI
+            __('Our team Widget', 'ElegantWUni'), 
+         
+        // Widget description
+            array('description' => __(' widget for dispaly team members', 'ElegantWUni'), )
+        );
+    }
+         
+        // Creating widget front-end
+
+    public function widget($args, $instance)
+    {
+        $our_team_name = apply_filters('widget_title', $instance['our_team_name']);
+        $our_team_image = apply_filters('widget_title', $instance['our_team_image']);
+        $our_team_subject = apply_filters('widget_title', $instance['our_team_subject']);
+        $our_team_price = apply_filters('widget_title', $instance['our_team_price']);
+        $our_team_link = apply_filters('widget_title', $instance['our_team_link']);
+
+
+       
+         $args['before_widget'] = '<div class="swiper-slide">
+                                        <div class="team-member">';
+
+
+         $args['after_widget'] = '</div></div>';
+        
+        // before and after widget arguments are defined by themes
+        echo $args['before_widget'];
+        if (!empty($our_team_image)){ 
+            echo ' <div class="team-member-img">
+                        <img src=" '.$our_team_image.' " alt="">
+                    </div>';
+        }
+
+        if (!empty($our_team_name)){ 
+            echo '<div class="team-member-name">'.$our_team_name.'</div>';
+        } 
+
+         if (!empty($our_team_subject)){ 
+            echo '  <div class="team-member-description">'.$our_team_subject.'</div>';
+        }  
+
+        if (!empty($our_team_price)){ 
+            echo '<div class="team-member-price">'.$our_team_price.' </div>';
+        } 
+
+         if (!empty($our_team_link)){ 
+            echo '<div class="more-info-instructor"> <a href=" '.$our_team_link.' ">  More info</a></div>';
+        }
+        
+
+
+        echo $args['after_widget'];
+    }
+         
+        // Widget Backend
+    public function form($instance)
+    {
+        
+        $our_team_name = !empty($instance['our_team_name']) ? $instance['our_team_name'] : 'Enter member name';
+        $our_team_image = !empty($instance['our_team_image']) ? $instance['our_team_image'] : '';
+        $our_team_subject = !empty($instance['our_team_subject']) ? $instance['our_team_subject'] : '';
+        $our_team_price = !empty($instance['our_team_price']) ? $instance['our_team_price'] : '';
+        $our_team_link = !empty($instance['our_team_link']) ? $instance['our_team_link'] : '';
+
+      
+
+    
+        // Widget admin form
+        ?>
+        <p>
+        <label for="<?php echo $this->get_field_id('our_team_name'); ?>"><?php _e(' Name:'); ?></label>
+        <input class="widefat" id="<?php echo $this->get_field_id('our_team_name'); ?>" name="<?php echo $this->get_field_name('our_team_name'); ?>" type="text" value="<?php echo esc_attr($our_team_name); ?>" />
+        </p>
+    
+         <p>
+            <label for="<?php echo $this->get_field_id('our_team_subject'); ?>"><?php _e('Subject:'); ?></label>
+            <input class="widefat" id="<?php echo $this->get_field_id('our_team_subject'); ?>" name="<?php echo $this->get_field_name('our_team_subject'); ?>" type="text" value="<?php echo esc_attr($our_team_subject); ?>" />
+         </p>
+
+        <p>
+            <label for="<?php echo $this->get_field_id('our_team_price'); ?>"><?php _e('Price:'); ?></label>
+            <input class="widefat" id="<?php echo $this->get_field_id('our_team_price'); ?>" name="<?php echo $this->get_field_name('our_team_price'); ?>" type="text" value="<?php echo esc_attr($our_team_price); ?>" />
+         </p>
+
+         <p>
+            <label for="<?php echo $this->get_field_id('our_team_link'); ?>"><?php _e('Link:'); ?></label>
+            <input class="widefat" id="<?php echo $this->get_field_id('our_team_link'); ?>" name="<?php echo $this->get_field_name('our_team_link'); ?>" type="text" value="<?php echo esc_attr($our_team_link); ?>" />
+         </p>
+
+        <p>
+	        <label for="<?php echo esc_attr($this->get_field_id('our_team_image')); ?>"><?php esc_attr_e('Image:', 'ElegantWUni'); ?></label> 
+		    <input class="widefat image-upload" id="<?php echo esc_attr($this->get_field_id('our_team_image')); ?>" name="<?php echo esc_attr($this->get_field_name('our_team_image')); ?>" type="text" value="<?php echo esc_url($our_team_image); ?>">
+		    <button type="button" class="button button-primary js-image-upload">Select Image</button>
+	    </p>
+
+        
+        <?php
+
+    }
+         
+        // Updating widget replacing old instances with new
+    public function update($new_instance, $old_instance)
+    {
+        $instance = array();
+        $instance['our_team_image'] = (!empty($new_instance['our_team_image'])) ? strip_tags($new_instance['our_team_image']) : '';
+        $instance['our_team_name'] = (!empty($new_instance['our_team_name'])) ? $new_instance['our_team_name'] : '';
+        $instance['our_team_subject'] = (!empty($new_instance['our_team_subject'])) ? strip_tags($new_instance['our_team_subject']) : '';
+        $instance['our_team_price'] = (!empty($new_instance['our_team_price'])) ? strip_tags($new_instance['our_team_price']) : '';
+        $instance['our_team_link'] = (!empty($new_instance['our_team_link'])) ? strip_tags($new_instance['our_team_link']) : '';
+
+
+
+        return $instance;
+    }
+         
+        // Class wpb_widget ends here
+} 
+         
+        // Register and load the widget
+function ewt_display_our_team_widget()
+{
+    register_widget('ewt_Our_team');
+}
+add_action('widgets_init', 'ewt_display_our_team_widget');
+
+
+

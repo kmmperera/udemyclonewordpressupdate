@@ -859,6 +859,10 @@ body{
     padding: 10px;
     margin: 10px 30px;
 }
+.more-info-instructor a{
+    text-decoration: none;
+    color: #fff;
+}
 .team-member-left{
     flex: 3;
 }

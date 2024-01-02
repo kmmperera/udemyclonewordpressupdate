@@ -171,134 +171,12 @@
                 <div class="swiper-container">
                     <div class="swiper swiper-videos">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="video-cards">
-                                    <iframe src="https://www.youtube.com/embed/Tfn3cCcE5hQ"></iframe>
-                                    <div class="course-title">
-                                        <h3> සිංහල නව විෂය නිර්දේශය හදුන්වා දීම</h3>
+                        <?php if (is_active_sidebar('ewt-more-videos-sidebar-widget')) : ?>
+                        
+                        <?php dynamic_sidebar('ewt-more-videos-sidebar-widget'); ?>
 
-                                    </div>
-                                    <div class="course-auther">
-                                        <p> Chathurika Dabare </p>
-                                    </div>
+                        <?php endif; ?>
 
-                                    <div class="course-price">
-                                        <h4>1000 Rs per 2 hours </h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="video-cards">
-                                    <iframe src="https://www.youtube.com/embed/Tfn3cCcE5hQ"></iframe>
-                                    <div class="course-title">
-                                        <h3> සිංහල නව විෂය නිර්දේශය හදුන්වා දීම</h3>
-
-                                    </div>
-                                    <div class="course-auther">
-                                        <p> Chathurika Dabare </p>
-                                    </div>
-
-                                    <div class="course-price">
-                                        <h4>1000 Rs per 2 hours </h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="video-cards">
-                                    <iframe src="https://www.youtube.com/embed/Tfn3cCcE5hQ"></iframe>
-                                    <div class="course-title">
-                                        <h3> සිංහල නව විෂය නිර්දේශය හදුන්වා දීම</h3>
-
-                                    </div>
-                                    <div class="course-auther">
-                                        <p> Chathurika Dabare </p>
-                                    </div>
-
-                                    <div class="course-price">
-                                        <h4>1000 Rs per 2 hours </h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="video-cards">
-                                    <iframe src="https://www.youtube.com/embed/Tfn3cCcE5hQ"></iframe>
-                                    <div class="course-title">
-                                        <h3> සිංහල නව විෂය නිර්දේශය හදුන්වා දීම</h3>
-
-                                    </div>
-                                    <div class="course-auther">
-                                        <p> Chathurika Dabare </p>
-                                    </div>
-
-                                    <div class="course-price">
-                                        <h4>1000 Rs per 2 hours </h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="video-cards">
-                                    <iframe src="https://www.youtube.com/embed/Tfn3cCcE5hQ"></iframe>
-                                    <div class="course-title">
-                                        <h3> සිංහල නව විෂය නිර්දේශය හදුන්වා දීම</h3>
-
-                                    </div>
-                                    <div class="course-auther">
-                                        <p> Chathurika Dabare </p>
-                                    </div>
-
-                                    <div class="course-price">
-                                        <h4>1000 Rs per 2 hours </h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="video-cards">
-                                    <iframe src="https://www.youtube.com/embed/Tfn3cCcE5hQ"></iframe>
-                                    <div class="course-title">
-                                        <h3> සිංහල නව විෂය නිර්දේශය හදුන්වා දීම</h3>
-
-                                    </div>
-                                    <div class="course-auther">
-                                        <p> Chathurika Dabare </p>
-                                    </div>
-
-                                    <div class="course-price">
-                                        <h4>1000 Rs per 2 hours </h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="video-cards">
-                                    <iframe src="https://www.youtube.com/embed/Tfn3cCcE5hQ"></iframe>
-                                    <div class="course-title">
-                                        <h3> සිංහල නව විෂය නිර්දේශය හදුන්වා දීම</h3>
-
-                                    </div>
-                                    <div class="course-auther">
-                                        <p> Chathurika Dabare </p>
-                                    </div>
-
-                                    <div class="course-price">
-                                        <h4>1000 Rs per 2 hours </h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="video-cards">
-                                    <iframe src="https://www.youtube.com/embed/Tfn3cCcE5hQ"></iframe>
-                                    <div class="course-title">
-                                        <h3> සිංහල නව විෂය නිර්දේශය හදුන්වා දීම</h3>
-
-                                    </div>
-                                    <div class="course-auther">
-                                        <p> Chathurika Dabare </p>
-                                    </div>
-
-                                    <div class="course-price">
-                                        <h4>1000 Rs per 2 hours </h4>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
 
 
@@ -326,71 +204,11 @@
                 </div>
                 <div class="fb-group-images">
                     <div class="fb-img-div">
-                        <a class="fb-group-link" href="">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <h4 class="fb-link-a-text">
-                                බස්නාහිර පලාතේ බාහිර උපාදිය කරන අපි
-                            </h4>
-                            <h4> සම්බන්ධවීමට Click කරන්න </h4>
+                    <?php if (is_active_sidebar('ewt-front-page-fb-sidebar-widget')) : ?>
+                        
+                        <?php dynamic_sidebar('ewt-front-page-fb-sidebar-widget'); ?>
 
-                        </a>
-                        <a class="fb-group-link" href="">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <h4 class="fb-link-a-text">
-                                බස්නාහිර පලාතේ බාහිර උපාදිය කරන අපි
-                            </h4>
-                            <h4> සම්බන්ධවීමට Click කරන්න </h4>
-                        </a>
-                        <a class="fb-group-link" href="">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <h4 class="fb-link-a-text">
-                                බස්නාහිර පලාතේ බාහිර උපාදිය කරන අපි
-                            </h4>
-                            <h4> සම්බන්ධවීමට Click කරන්න </h4>
-                        </a>
-                        <a class="fb-group-link" href="">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <h4 class="fb-link-a-text">
-                                බස්නාහිර පලාතේ බාහිර උපාදිය කරන අපි
-                            </h4>
-                            <h4> සම්බන්ධවීමට Click කරන්න </h4>
-                        </a>
-                        <a class="fb-group-link" href="">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <h4 class="fb-link-a-text">
-                                බස්නාහිර පලාතේ බාහිර උපාදිය කරන අපි
-                            </h4>
-                            <h4> සම්බන්ධවීමට Click කරන්න </h4>
-                        </a>
-                        <a class="fb-group-link" href="">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <h4 class="fb-link-a-text">
-                                බස්නාහිර පලාතේ බාහිර උපාදිය කරන අපි
-                            </h4>
-                            <h4> සම්බන්ධවීමට Click කරන්න </h4>
-                        </a>
-                        <a class="fb-group-link" href="">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <h4 class="fb-link-a-text">
-                                බස්නාහිර පලාතේ බාහිර උපාදිය කරන අපි
-                            </h4>
-                            <h4> සම්බන්ධවීමට Click කරන්න </h4>
-                        </a>
-                        <a class="fb-group-link" href="">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <h4 class="fb-link-a-text">
-                                බස්නාහිර පලාතේ බාහිර උපාදිය කරන අපි
-                            </h4>
-                            <h4> සම්බන්ධවීමට Click කරන්න </h4>
-                        </a>
-                        <a class="fb-group-link" href="">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <h4 class="fb-link-a-text">
-                                බස්නාහිර පලාතේ බාහිර උපාදිය කරන අපි
-                            </h4>
-                            <h4> සම්බන්ධවීමට Click කරන්න </h4>
-                        </a>
-
+                    <?php endif; ?>
 
 
 
@@ -541,106 +359,12 @@
 
                     <div class="swiper our-team-swiper">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="team-member">
-                                    <div class="team-member-img">
-                                        <img src="<?php echo get_template_directory_uri() . '/assets/image/ayomi.jpg' ?>" alt="">
-                                    </div>
-                                    <div class="team-member-name">
-                                        Ayomi
-                                        <br/> Jayasinghe
-                                    </div>
-                                    <div class="team-member-description">
-                                        Psycology
-                                    </div>
-                                    <div class="team-member-price">
-                                        Rs.1000 per 2 hours
-                                    </div>
-                                    <div class="more-info-instructor">
-                                        More info
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="team-member">
-                                    <div class="team-member-img">
-                                        <img src="<?php echo get_template_directory_uri() . '/assets/image/ayomi.jpg' ?>" alt="">
-                                    </div>
-                                    <div class="team-member-name">
-                                        Ayomi
-                                        <br/> Jayasinghe
-                                    </div>
-                                    <div class="team-member-description">
-                                        Psycology
-                                    </div>
-                                    <div class="team-member-price">
-                                        Rs.1000 per 2 hours
-                                    </div>
-                                    <div class="more-info-instructor">
-                                        More info
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="team-member">
-                                    <div class="team-member-img">
-                                        <img src="<?php echo get_template_directory_uri() . '/assets/image/ayomi.jpg' ?>" alt="">
-                                    </div>
-                                    <div class="team-member-name">
-                                        Ayomi
-                                        <br/> Jayasinghe
-                                    </div>
-                                    <div class="team-member-description">
-                                        Psycology
-                                    </div>
-                                    <div class="team-member-price">
-                                        Rs.1000 per 2 hours
-                                    </div>
-                                    <div class="more-info-instructor">
-                                        More info
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="team-member">
-                                    <div class="team-member-img">
-                                        <img src="<?php echo get_template_directory_uri() . '/assets/image/ayomi.jpg' ?>" alt="">
-                                    </div>
-                                    <div class="team-member-name">
-                                        Ayomi
-                                        <br/> Jayasinghe
-                                    </div>
-                                    <div class="team-member-description">
-                                        Psycology
-                                    </div>
-                                    <div class="team-member-price">
-                                        Rs.1000 per 2 hours
-                                    </div>
-                                    <div class="more-info-instructor">
-                                        More info
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="team-member">
-                                    <div class="team-member-img">
-                                        <img src="<?php echo get_template_directory_uri() . '/assets/image/ayomi.jpg' ?>" alt="">
-                                    </div>
-                                    <div class="team-member-name">
-                                        Ayomi
-                                        <br/> Jayasinghe
-                                    </div>
-                                    <div class="team-member-description">
-                                        Psycology
-                                    </div>
-                                    <div class="team-member-price">
-                                        Rs.1000 per 2 hours
-                                    </div>
-                                    <div class="more-info-instructor">
-                                        More info
-                                    </div>
-                                </div>
-                            </div>
+                          
+                        <?php if (is_active_sidebar('ewt-our-team-sidebar-widget')) : ?>
+                        
+                        <?php dynamic_sidebar('ewt-our-team-sidebar-widget'); ?>
+
+                        <?php endif; ?>
 
 
                         </div>

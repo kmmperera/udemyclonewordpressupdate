@@ -45,11 +45,6 @@
 
         </div>
         <div class="team-widget-div">
-                <?php if( is_active_sidebar('ewt-team-widget') ):?>
-                        
-                        <?php dynamic_sidebar('ewt-team-widget');?>
-
-                <?php endif;?>
 
         </div>
 
