@@ -84,7 +84,7 @@ body{
     border: 0;
     outline: none;
     text-indent:10px;
-    width: 100%;
+    
   
 }
 .header-one{
@@ -232,6 +232,20 @@ body{
 }
 .header-wp-mobile-menu-ul-wrapper ul li a:hover{
     color: #5624d0;
+}
+.search-form{
+    display: flex;
+    width: 100%;
+}
+.search-lable{
+    flex-grow: 1;
+}
+.search-field{
+    width: 100%;
+}
+.search-submit{
+    padding-right: 12px;
+    cursor: pointer;
 }
 @media (max-width:567px){
     .header-wrapper{
@@ -1071,6 +1085,7 @@ body{
 /* WP Custom CSS - Page */
 .ewt-page-title{
     text-align: center;
+    margin-top: 48px;
 }
 
 .pagecontatentwrapper{
@@ -1204,6 +1219,7 @@ body{
     padding: 20px 30px;
     display: block;
     margin-bottom: 50px;
+    text-align: center;
 }
 .semina-widget-wrapper{
     justify-content: center;
@@ -1224,9 +1240,33 @@ body{
     }
     
 }
-
-
-
+/* Search page */
+.search-results-wrapper{
+    margin: 12px 160px;
+}
+.search-query h3{
+    text-align: center;
+}
+.ewt-search-titile{
+    display: flex;
+    justify-content: center;
+    line-height: 30px;
+}
+.search-page-top{
+    margin-top: 100px;
+    margin-bottom: 48px;
+}
+.search-result{
+    margin-bottom: 48px;
+}
+.search-result p {
+    margin: 12px 0px;
+}
+@media(max-width:996px){
+    .search-results-wrapper{
+        margin: 12px 50px;
+    }
+}
 /* WP custom posts -teachers */
 
 

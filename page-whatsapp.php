@@ -1,23 +1,7 @@
 <?php /* Template Name: Whatsapp  Template */ ?>
 
 <?php get_header(); ?>
-<div class="menu-wrapper">
-   <div class="ewt-wrapper">
-        <div class="hero-area">
-        
-            <nav class="ewt-nav">
-                <div class="ewt-nav-wrapper">
-                    <div class="ewt-logo">
-                      <img src="<?php echo get_template_directory_uri() . '/assets/img/logo.png' ?>" alt="">
-                    </div>
-                
-               </div>
-            </nav>
 
-
-        </div>
-    </div>
- </div>
 
 <div class="pagesection">
         <div class="pagecontatentwrapper">
@@ -37,6 +21,8 @@
        
 
 </div>
+
+
 <div class="whatsapp-description">
     <div class="whatsapp-description-wrapper">
         <div class="whatsapp-description-texts">

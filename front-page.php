@@ -65,10 +65,7 @@
                 </div>
                 <div class="header-search other-search">
 
-                    <button class="search-btn">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                    <input type="text" placeholder="Search for anything">
+                    <?php get_search_form(); ?>
                 </div>
             </div>
 
