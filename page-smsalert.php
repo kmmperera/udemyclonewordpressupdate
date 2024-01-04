@@ -40,25 +40,31 @@
 <div class="whatsapp-description">
     <div class="whatsapp-description-wrapper">
         <div class="whatsapp-description-texts">
-            <h1>කාල සටහන් ලබා ගැනිම සදහා පහත ලින්ක් මත ක්ලික් කරන්න .....
+            <h1>SMS ALERT සේවාව සඳහා ලියාපදිංචිය.....
             </h1>
-            <p>අප විසින් යාවත්කාලීන කරන කාල සටහන් මෙම පිටුවෙ ලැයිස්තුගත කර ඇත
+            <p>විශ්ව විද්‍යාලය මගින් ලබාදෙන තොරතුරු දිනපතා ලබාගන්න....
+
+
+            </p>
+            <img src="<?php echo get_template_directory_uri().'/assets/image/smsalert.jpg'?>" alt="">
+            <h1>SMS Alert Service යනු කුමක්ද..?
+
+            </h1>
+            <p>බාහිර උපාධිය කැලණිය විශ්වවිද්‍යාලය හා අනෙකුත් විශ්වවිද්‍යාලයන්හි බාහිර උපාධිය හදාරනු ලබන බොහෝ සිසුන්හට විශ්වවිද්‍යාලය මගින් නිකුත් කරනු ලබන නිවේදනයන් නොලැබී යාම සම්බන්ධයෙන් බොහෝ සිසුන් අප වෙත පසුගිය කාල වලදී දෙනුම් දෙන ලදි…එම අපහසුතාවය මග හැරීමට හා සිසුන්හට නියමිත වේලාවට විශ්ව විද්‍යාලය තම නිල වෙබ් අඩවියට යාවත්කාලීන කරනු ලබන නිවේදනයන් මෙම සේවාව හරහා ඔබට ඔබගේ දුරකතනයට SMS මාර්ගයෙන් අප විසින් ඔබ විසින් ලබාදීමට කටයුතු කර ඇත..
+                <br/><br/>
+
+            එසේම මෙම සේවාව ඔස්සේ අපගේ Online දේශන සඳහා සහබාගීවීමට ආර්ථික අපහසුතා ඇති සිසුන්හට විෂයන් වලට අදාල අනුමාන ප්‍රශ්න,සටහන් ආදී ඉතාමත් වැදගත් Download Link මෙම සේවාව ඔස්සේ ලබාදීමට කටයුතු කර ඇත…
+            <br/><br/>
+
+
+            (සැ.යු; ගාස්තු අය වේ… )
+
+
+
 
             </p>
         </div>
     </div>
 </div>
-<div class="whatsapp-widgests time-tables-widget">
-    <div class="whatsapp-wiges-wrapper justify-center time-tables-widget-wrapper">
-        <div class="whatsapp-columns first-year-col">
-            <a href="">ප්‍රතම වසර</a>
-        </div>
-        <div class="whatsapp-columns second-year-col">
-            <a href="">දෙවන වසර</a>
-        </div> <div class="whatsapp-columns third-year-col">
-            <a href="">තෙවන වසර</a>
-        </div>
-        
-    </div>
-</div>				
+
 <?php get_footer(); ?>

@@ -3,21 +3,26 @@
 <section class="postsection">
 <div class="postcontatentwrapper">
 	
-<h1><?php the_title();?></h1>
+<h1 class="ewt-page-title"><?php the_title();?></h1>
 
 			<?php if(has_post_thumbnail()):?>
-				<div class="">
-					<a href="<?php the_post_thumbnail_url('blog-large');?>">
+				<div class="teacher-thumbnail">
+					
 						<img src="<?php the_post_thumbnail_url('blog-large');?>" alt="<?php the_title();?>" class="img-fluid mb-3 img-thumbnail">
-					</a>
+					
 				</div>
 			<?php endif;?>
+<div class="teacher-content-div">
 
-<?php if( have_posts() ): while( have_posts() ): the_post();?>
+	<div class="teacher-content-wrapper description-text-wrapper">
+		<?php if( have_posts() ): while( have_posts() ): the_post();?>
 
-	<?php the_content();?>
+			<?php the_content();?>
 
-<?php endwhile; else: endif;?>
+		<?php endwhile; else: endif;?>
+
+	</div>
+</div>		
 
 </div>
 </section>

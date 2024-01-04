@@ -1185,6 +1185,12 @@ body{
     margin-bottom: 24px;
     line-height: 1.6;
 }
+.whatsapp-description-texts img{
+    display: block;
+    max-width: 80%;
+    margin: 48px auto;
+   
+}
 .whatsapp-wiges-wrapper{
     margin: 50px 160px 0px 160px;
     display: flex;
@@ -1221,12 +1227,34 @@ body{
 
 
 
+/* WP custom posts -teachers */
 
 
+.postsection{
+    margin: 120px 50px;
+}
+.teacher-thumbnail img{
+    display: block;
+    max-width: 30%;
+    margin: 12px auto;
+}
+.teacher-content-wrapper p ,teacher-content-wrapper h1 , .teacher-content-wrapper h2 , .teacher-content-wrapper h3 , .teacher-content-wrapper header{
 
+    margin-bottom: 24px;
+    line-height: 1.7;
 
-
-
+}
+@media(max-width:996px){
+    .postsection{
+        margin: 120px 12px;
+    }
+    .teacher-thumbnail img{
+       
+        max-width: 50%;
+       
+    }
+    
+}
 
 
 
