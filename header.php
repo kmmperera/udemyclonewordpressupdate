@@ -14,7 +14,21 @@
                 <img src="<?php echo get_template_directory_uri().'/assets/image/logo.png'?>" alt="">
             </div>
             <div class="header-categories grey-letters">
-                Categories
+               <p class="cate-p"> Categories </p>
+               <div class="header-wp-menu">
+               <?php wp_nav_menu(
+                    array(
+                        'theme_location' => 'top-menu',
+                        'depth' => 2,
+                        'container' => 'div',
+                        'container_class' => 'header-wp-menu-ul-wrapper',
+                        'container_id' => 'ewt-wp-header-wrapper',
+
+
+                    )
+                );
+                ?>
+               </div>
             </div>
             <div class="header-search">
 
@@ -46,30 +60,16 @@
                         <div class="hamburger-close">
                             <i class="fa-regular fa-rectangle-xmark"></i>
                         </div>
-                        <ul class="mobile-menu-ul">
-                            <li class="mobile-menu-li">
-                                <a class="mobile-menu-a" href="">Home</a>
-                            </li>
-                            <li class="mobile-menu-li">
-                                <a class="mobile-menu-a" href="">Contact Us</a>
-                            </li>
-                            <li class="mobile-menu-li">
-                                <a class="mobile-menu-a" href="">About Us</a>
-                            </li>
-                            <li class="mobile-menu-li">
-                                <a class="mobile-menu-a" href="">Our Courses</a>
-                            </li>
-                            <li class="mobile-menu-li">
-                                <a class="mobile-menu-a" href="">Facebook Groups</a>
-                            </li>
-                            <li class="mobile-menu-li">
-                                <a class="mobile-menu-a" href="">Prices</a>
-                            </li>
-                            <li class="mobile-menu-li">
-                                <a class="mobile-menu-a" href="">Home</a>
-                            </li>
-
-                        </ul>
+                        <?php wp_nav_menu(
+                                 array(
+                                    'theme_location' => 'top-menu',
+                                    'depth' => 2,
+                                    'container' => 'div',
+                                    'container_class' => 'header-wp-mobile-menu-ul-wrapper'
+                                    
+                                     )
+                                         );
+                         ?>
                     </div>
                     <div class="mobile-menu-footer">
                         <div class="tele-number">

@@ -191,6 +191,21 @@ function my_sidebars()
 
     );
 
+    register_sidebar(
+
+        array(
+
+            'name' => 'About us teachers Area widget',
+            'id' => 'ewt-about-us-teachers-sidebar-widget',
+
+
+
+
+        )
+
+    );
+
+    
 
 }
 

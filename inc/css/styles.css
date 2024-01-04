@@ -7,6 +7,10 @@ body{
   overflow-x: hidden;
   font-family: sans-serif;
   color: #2d2f31;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
 }
 .main{
@@ -18,6 +22,11 @@ body{
 .swiper-container{
     position: relative;
 }
+.bottom-line{
+    border-bottom: 1px solid #fafafa;
+   
+}
+
 /* Header */
 
 .header{
@@ -94,6 +103,7 @@ body{
   align-items: center;
   font-weight: 700;
   padding: 14px;
+  text-align: center;
 }
 .tel-p{
     display: inline-block;
@@ -178,8 +188,51 @@ body{
     text-align: center;
     font-weight: 600;
 }
+.header-wp-menu{
+    position: relative;
+    display: none;
+    
+}
+.header-wp-menu-ul-wrapper{
+    position: absolute;
+   
+    background-color: #fff;
+    padding: 20px 20px 20px 20px;
+    box-shadow: 0 0 0 1px #d1d7dc, 0 2px 4px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.08);
+    min-width: 170px;
+    
+   
+}
+.cate-p{
+    line-height: 72px;
+}
+.header-categories:hover .header-wp-menu{
+    display: block;
+}
+.header-wp-menu-ul-wrapper ul li{
+    list-style: none;
+    margin-bottom: 12px;
+}
 
+.header-wp-menu-ul-wrapper ul li a{
+    text-decoration: none;
+    color: #2d2f31;
+}
 
+.header-wp-menu-ul-wrapper ul li a:hover{
+    color: #5624d0;
+}
+.header-wp-mobile-menu-ul-wrapper  li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+.header-wp-mobile-menu-ul-wrapper ul li a{
+    text-decoration: none;
+    color: #2d2f31;
+}
+.header-wp-mobile-menu-ul-wrapper ul li a:hover{
+    color: #5624d0;
+}
 @media (max-width:567px){
     .header-wrapper{
         max-width: 550px;
@@ -974,6 +1027,7 @@ body{
     background-color: #1c1d1f;
     color: #fff;
     margin-top: 48px;
+    
 }
 .footer-sectione-one-wrappaer{
     display: flex;
@@ -1011,5 +1065,175 @@ body{
     }
     .footer-sectione-two-wrappaer{
         padding: 64px 24px 32px 24px;
+    }
+}
+
+/* WP Custom CSS - Page */
+.ewt-page-title{
+    text-align: center;
+}
+
+.pagecontatentwrapper{
+    margin: 90px 48px 20px 48px;
+}
+.about-us-description-wrapper{
+  
+   
+    
+}
+.description-text-wrapper{
+    margin: 0px 160px 0px 160px;
+    background-color: #fafafa;
+    padding:24px;
+    border-radius: 9px;
+}
+.about-us-description-wrapper p{
+   
+    line-height: 1.6;
+}
+.about-us-description-wrapper h1{
+   
+    margin-bottom: 24px;
+}
+
+.about-us-ceo-wrapper{
+    margin: 120px 160px 12px 160px;
+   
+}
+
+.ceo-row{
+    display: flex;
+    justify-content: space-between;
+   margin-top: 48px;
+   flex-wrap: wrap;
+  
+
+}
+.ceo-row h1, .ceo-row h4, .ceo-row p{
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+.ceo-right{
+    width: 500px;
+   
+}
+.ceo-right{
+    background-color:  #fafafa;
+    padding:24px;
+     border-radius: 9px;
+}
+.ceo-left img{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    object-position:center;
+}
+.about-us-teachers-wrapper{
+    margin: 60px 160px 12px 160px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-us-teachers-wrapper .swiper-slide{
+    width: 300px;
+}
+.link-to-sms-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 120px 160px 12px 160px;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+.sms-left{
+    flex-shrink: 0;
+}
+.sms-middle{
+    max-width:500px;
+}
+.sms-right a{
+    text-decoration: none;
+    padding: 12px 18px;
+    color: #fff;
+    background-color: #f54b4b;
+}
+@media(max-width:996px){
+    .about-us-ceo-wrapper{
+        margin: 120px 50px 12px 50px;
+    }
+    .description-text-wrapper{
+        margin: 12px 50px 12px 50px;
+    }
+    .about-us-teachers-wrapper{
+        margin: initial;
+    }
+    .sms-middle{
+        min-width: 250px;
+    }
+}
+
+
+/* Whatsapp page */
+
+.whatsapp-description-texts{
+    margin: 0px 160px 0px 160px;
+    background-color: #fafafa;
+    padding: 24px;
+    border-radius: 9px;
+}
+
+.whatsapp-description-texts h1,  .whatsapp-description-texts p{
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+.whatsapp-wiges-wrapper{
+    margin: 50px 160px 0px 160px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.whatsapp-columns a{
+    text-decoration: none;
+    color: #fff;
+    background-color: #1c1d1f;
+    padding: 20px 30px;
+    display: block;
+    margin-bottom: 50px;
+}
+.semina-widget-wrapper{
+    justify-content: center;
+    gap: 50px;
+}
+@media(max-width:996px){
+    .whatsapp-description-texts{
+        margin: 12px 50px 12px 50px;
+    }
+    .whatsapp-wiges-wrapper{
+        margin: 50px 50px 12px 50px;
+        gap: 50px;
+        
+    }
+    .whatsapp-columns a{
+        display: block;
+        width: 143px;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Common mobile css */
+
+@media(max-width:996px){
+    .justify-center{ 
+    justify-content: center;
     }
 }

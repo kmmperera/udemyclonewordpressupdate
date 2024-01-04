@@ -90,7 +90,7 @@
         <div class="footer-sectione-two">
             <div class="footer-sectione-two-wrappaer">
                 <div class="footer-second-left">
-                    <img src="./inc/image/logo.png" alt="">
+                    <img src="<?php echo get_template_directory_uri().'/assets/image/logo.png'?>" alt="">
                 </div>
                 <div class="footer-second-right">
                     <p>
