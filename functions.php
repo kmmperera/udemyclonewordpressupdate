@@ -8,7 +8,7 @@ function load_css()
     $num1 = rand(1, 999);
     $num2 = rand(1, 999);
     $num3 = ($num1 + $num2) / 2;
-    wp_register_style('maincss', get_template_directory_uri() . '/inc/css/styles.css', array(), $num3, 'all');
+    wp_register_style('maincss', get_template_directory_uri() . '/inc/css/styles.css', array(), '1.0.0', 'all');
     wp_enqueue_style('maincss');
 
     wp_register_style('fontawesome-css', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css', '', '1.0.0', 'all');
@@ -220,102 +220,7 @@ add_action('widgets_init', 'my_sidebars');
 
 
 
-// Creating the widget
-class ewt_Courses extends WP_Widget
-{
 
-    function __construct()
-    {
-        parent::__construct(
-     
-    // Base ID of your widget
-            'ewt_courses_widget', 
-     
-    // Widget name will appear in UI
-            __('Courses Widget', 'ElegantWUni'), 
-     
-    // Widget description
-            array('description' => __('Courses widget for dispaly available courses', 'ElegantWUni'), )
-        );
-    }
-     
-    // Creating widget front-end
-
-    public function widget($args, $instance)
-    {
-        $title = apply_filters('widget_title', $instance['title']);
-     
-    // before and after widget arguments are defined by themes
-        echo $args['before_widget'];
-        if (!empty($title))
-            echo $args['before_title'] . $title . $args['after_title'];
-     
-    // This is where you run the code and display the output
-
-        if (!empty($instance['image'])) {
-            echo '<img src="' . esc_url($instance['image']) . '" alt="">';
-        }
-
-        if (!empty($instance['discription'])) {
-            echo '<div class="ewt-courses-discription" >' . $instance['discription'] . '</div>';
-        }
-
-        echo $args['after_widget'];
-    }
-     
-    // Widget Backend
-    public function form($instance)
-    {
-        if (isset($instance['title'])) {
-            $title = $instance['title'];
-        } else {
-            $title = __('New course', 'ElegantWUni');
-        }
-        $image = !empty($instance['image']) ? $instance['image'] : '';
-
-    // Widget admin form
-        ?>
-    <p>
-    <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Course Name:'); ?></label>
-    <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" />
-    </p>
-
-     <p>
-        <label for="<?php echo $this->get_field_id('discription'); ?>"><?php _e('Discription:'); ?></label>
-        <input class="widefat" id="<?php echo $this->get_field_id('discription'); ?>" name="<?php echo $this->get_field_name('discription'); ?>" type="text" value="<?php echo esc_attr($discription); ?>" />
-        </p>
-
-
-    <p>
-	    <label for="<?php echo esc_attr($this->get_field_id('image')); ?>"><?php esc_attr_e('Image:', 'ElegantWUni'); ?></label> 
-		<input class="widefat image-upload" id="<?php echo esc_attr($this->get_field_id('image')); ?>" name="<?php echo esc_attr($this->get_field_name('image')); ?>" type="text" value="<?php echo esc_url($image); ?>">
-		<button type="button" class="button button-primary js-image-upload">Select Image</button>
-	</p>
-
-    <?php
-
-}
-     
-    // Updating widget replacing old instances with new
-public function update($new_instance, $old_instance)
-{
-    $instance = array();
-    $instance['title'] = (!empty($new_instance['title'])) ? strip_tags($new_instance['title']) : '';
-    $instance['image'] = (!empty($new_instance['image'])) ? $new_instance['image'] : '';
-    $instance['discription'] = (!empty($new_instance['discription'])) ? $new_instance['discription'] : '';
-
-    return $instance;
-}
-     
-    // Class wpb_widget ends here
-} 
-     
-    // Register and load the widget
-function ewt_load_courses_widget()
-{
-    register_widget('ewt_Courses');
-}
-add_action('widgets_init', 'ewt_load_courses_widget');
 
 
 
@@ -1297,7 +1202,7 @@ class ewt_Fb_groups extends WP_Widget
             'ewt_fb_groups_widget', 
          
         // Widget name will appear in UI
-            __('Facebookk grops Widget', 'ElegantWUni'), 
+            __('Facebook groups Widget', 'ElegantWUni'), 
          
         // Widget description
             array('description' => __(' widget for dispaly facebook groups', 'ElegantWUni'), )
@@ -1390,7 +1295,7 @@ class ewt_Our_team extends WP_Widget
             'ewt_our_team_widget', 
          
         // Widget name will appear in UI
-            __('Our team Widget', 'ElegantWUni'), 
+            __('Our team/courses Widget', 'ElegantWUni'), 
          
         // Widget description
             array('description' => __(' widget for dispaly team members', 'ElegantWUni'), )
