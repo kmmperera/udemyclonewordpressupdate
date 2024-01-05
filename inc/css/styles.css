@@ -266,9 +266,14 @@ body{
     padding-right: 12px;
     cursor: pointer;
 }
-@media (max-width:567px){
+@media(max-width:770px){
+    .header-one {
+        display: none;
+    }
+}
+@media (max-width:670px){
     .header-wrapper{
-        max-width: 550px;
+       
         justify-content: space-between;
     }
     .mobile-menu-wrapper{
@@ -311,9 +316,18 @@ body{
 .hero-wrapper{
     position: relative;
 }
-
 .hero-image{
-
+    position: relative;
+}
+.hero-image::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0,0,0,0.6);
 }
 .hero-image img{
     width: 100%;
@@ -321,21 +335,26 @@ body{
 
 .hero-text{
     position: absolute;
-    bottom: 20px;
-    left: 60px;
-    background: #fff;
-    color:black;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+   
     padding: 24px;
     width: 400px;
 }
-
+.hero-text h1 , .hero-text p{
+    color: #fff;
+}
 .hero-text h1{
     margin-bottom: 12px;
-    color: #2d2f31;
+    font-size: 18px;
+   
 }
 .hero-text p{
     margin-bottom: 16px;
-    color: #2d2f31;
+   
     line-height: 1.5;
 }
 .hero-swiper{
@@ -384,13 +403,44 @@ body{
 .other-search{
     display: none;
 }
+
+.hero-pic-btns{
+    text-decoration: none;
+    color:#fff;
+   background-color: #2d2f31;
+   padding: 4px 8px;
+}
+@media(max-width:670px){
+    .other-search {
+        display: flex;
+        width: 90%;
+        margin: 10px auto;
+        border-radius: 0;
+    }
+}
 @media (max-width:567px){
+    .hero-pic-btns{
+        color: #fff;
+    }
     .hero-arrows{
         display: none;
     }
     .hero-text{
         position: initial;
+        transform: initial;
+        margin: 0px auto;
 
+    }
+    .hero-text h1{
+       color: initial;
+       
+    }
+    
+    .hero-text p{
+        color: initial;
+    }
+    .hero-image::after{
+        display: none;
     }
     .hero-image img{
     width: 100%;
@@ -839,12 +889,12 @@ body{
    font-size: 14px;
     color:#a4a5a8;
 }
-@media (max-width:567px){
+@media (max-width:700px){
     .category-section-columns{
         flex-wrap: wrap;
     }
     .category-link-wrapper{
-        padding: 0px 24px;
+        padding: 0px 80px;
     }
 }
 /* More info section */

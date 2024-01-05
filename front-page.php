@@ -23,7 +23,8 @@
                                 <img src="<?php echo get_template_directory_uri() . '/assets/image/hero-two.png' ?>"     alt="">
                             </div>
                             <div class="hero-text">
-                                <h1>පොත්...
+                                <h1>
+                                    <a class="hero-pic-btns" href="./get-books">Order now</a>
 
                                 </h1>
                                 <p>
@@ -31,6 +32,7 @@
 
 
                                 </p>
+
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -39,7 +41,7 @@
                             </div>
                             <div class="hero-text">
                                 <h1>
-                                    Whatapp
+                                <a class="hero-pic-btns" href="./join-our-whatsapp">  Join now </a>
                                 </h1>
                                 <p>
                                 අපගේ Whatapp සමූහයන් හා එක් වන්න 
