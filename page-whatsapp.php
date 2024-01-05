@@ -36,14 +36,12 @@
 </div>
 <div class="whatsapp-widgests">
     <div class="whatsapp-wiges-wrapper justify-center">
-        <div class="whatsapp-columns first-year-col">
-            <a href="">ප්‍රතම වසර</a>
-        </div>
-        <div class="whatsapp-columns second-year-col">
-            <a href="">දෙවන වසර</a>
-        </div> <div class="whatsapp-columns third-year-col">
-            <a href="">තෙවන වසර</a>
-        </div>
+       
+                <?php if (is_active_sidebar('ewt-whatsapp-page-buttons-sidebar-widget')) : ?>
+                        
+                        <?php dynamic_sidebar('ewt-whatsapp-page-buttons-sidebar-widget'); ?>
+
+                <?php endif; ?>
     </div>
 </div>				
 <?php get_footer(); ?>

@@ -205,6 +205,48 @@ function my_sidebars()
 
     );
 
+    register_sidebar(
+
+        array(
+
+            'name' => 'Semina Page Buttons Area widget',
+            'id' => 'ewt-semina-buttons-sidebar-widget',
+
+
+
+
+        )
+
+    );
+
+    register_sidebar(
+
+        array(
+
+            'name' => 'Time table Page Buttons Area widget',
+            'id' => 'ewt-time-table-buttons-sidebar-widget',
+
+
+
+
+        )
+
+    );
+
+    register_sidebar(
+
+        array(
+
+            'name' => 'Whatsapp Page Buttons Area widget',
+            'id' => 'ewt-whatsapp-page-buttons-sidebar-widget',
+
+
+
+
+        )
+
+    );
+
     
 
 }
@@ -488,7 +530,7 @@ class ewt_Tabs_Slider_Info extends WP_Widget
             echo '<p>' . $subject_description . '</p>';
 
         if (!empty($subject_link))
-            echo ' <div class="explore-btn"> <a href=".$subject_link."> Explore More</a></div>';
+            echo ' <div class="explore-btn"> <a href=" '.$subject_link.' "> Explore More</a></div>';
        
         // This is where you run the code and display the output
 
@@ -1507,6 +1549,107 @@ function ewt_display_our_team_widget()
     register_widget('ewt_Our_team');
 }
 add_action('widgets_init', 'ewt_display_our_team_widget');
+
+
+
+
+class ewt_Button_link extends WP_Widget
+{
+
+    function __construct()
+    {
+        parent::__construct(
+         
+        // Base ID of your widget
+            'ewt_button_link_widget', 
+         
+        // Widget name will appear in UI
+            __('Button link Widget', 'ElegantWUni'), 
+         
+        // Widget description
+            array('description' => __(' widget for dispaly Button link', 'ElegantWUni'), )
+        );
+    }
+         
+        // Creating widget front-end
+
+    public function widget($args, $instance)
+    {
+        $link_text = apply_filters('widget_title', $instance['link_text']);
+        $link_caption = apply_filters('widget_title', $instance['link_caption']);
+
+
+       
+         $args['before_widget'] = '<div class="whatsapp-columns ">';
+
+
+         $args['after_widget'] = '</div>';
+        
+        // before and after widget arguments are defined by themes
+        echo $args['before_widget'];
+        if (!empty($link_text)){ 
+            echo '<a href=" '.$link_text. ' ">'. $link_caption.'</a>';
+        }
+
+        
+        
+
+
+        echo $args['after_widget'];
+    }
+         
+        // Widget Backend
+    public function form($instance)
+    {
+        
+        $link_text = !empty($instance['link_text']) ? $instance['link_text'] : 'Enter link';
+        $link_caption = !empty($instance['link_caption']) ? $instance['link_caption'] : 'Enter Caption';
+
+
+      
+
+    
+        // Widget admin form
+        ?>
+        <p>
+        <label for="<?php echo $this->get_field_id('link_text'); ?>"><?php _e(' Link:'); ?></label>
+        <input class="widefat" id="<?php echo $this->get_field_id('link_text'); ?>" name="<?php echo $this->get_field_name('link_text'); ?>" type="text" value="<?php echo esc_attr($link_text); ?>" />
+        </p>
+
+        <p>
+        <label for="<?php echo $this->get_field_id('link_caption'); ?>"><?php _e(' Caption:'); ?></label>
+        <input class="widefat" id="<?php echo $this->get_field_id('link_caption'); ?>" name="<?php echo $this->get_field_name('link_caption'); ?>" type="text" value="<?php echo esc_attr($link_caption); ?>" />
+        </p>
+    
+        
+
+        
+        <?php
+
+    }
+         
+        // Updating widget replacing old instances with new
+    public function update($new_instance, $old_instance)
+    {
+        $instance = array();
+        $instance['link_text'] = (!empty($new_instance['link_text'])) ? strip_tags($new_instance['link_text']) : '';
+        $instance['link_caption'] = (!empty($new_instance['link_caption'])) ? strip_tags($new_instance['link_caption']) : '';
+
+
+
+
+        return $instance;
+    }
+         
+        // Class wpb_widget ends here
+} 
+         
+        // Register and load the widget
+function ewt_display_button_link_widget()
+{
+    register_widget('ewt_Button_link');
+}
+add_action('widgets_init', 'ewt_display_button_link_widget');
 
 
 

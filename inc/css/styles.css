@@ -618,6 +618,10 @@ body{
     margin-bottom: 24px;
    
 }
+.reviews-slide-part-one p{
+    height: 160px;
+    overflow-y: auto;
+}
 .reviews-slide-part-two{
     margin-bottom: 24px;
     padding-bottom: 24px;
@@ -772,6 +776,12 @@ body{
     margin-top: 24px;
     margin-bottom: 24px;
 }
+@media(max-width:996px){
+    .fb-img-div{
+        justify-content: center;
+    }
+   
+}
 /* category link section*/
 .category-link-section{
     background-color: #f7f9fa;
@@ -869,6 +879,19 @@ body{
 }
 .dark-btn:hover{
     opacity: 0.9;
+}
+@media(max-width:996px){
+    .more-info-wrapper{
+        
+        margin: 0;
+    }
+}
+@media(max-width:714px){
+    .more-info-wrapper{
+       
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 @media(max-width:567px){
     .more-info-wrapper{
@@ -1024,6 +1047,19 @@ body{
     width: 180px;
    
 }
+@media(max-width:996px){
+    .join-us-wrapper{
+       
+        padding: 12px;
+    }
+}
+@media(max-width:714px){
+    .join-us-wrapper{
+       
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
 @media(max-width:567px){
     .join-us-wrapper{
         flex-wrap: wrap;
@@ -1151,6 +1187,7 @@ body{
 }
 .about-us-teachers-wrapper .swiper-slide{
     width: 300px;
+    margin-bottom:60px;
 }
 .link-to-sms-wrapper {
     display: flex;
@@ -1217,7 +1254,7 @@ body{
     color: #fff;
     background-color: #1c1d1f;
     padding: 20px 30px;
-    display: block;
+    display: inline-block;
     margin-bottom: 50px;
     text-align: center;
 }
@@ -1258,14 +1295,41 @@ body{
 }
 .search-result{
     margin-bottom: 48px;
+    background-color: #fafafa;
+    padding: 24px;
+    border-radius: 9px;
 }
 .search-result p {
+    margin: 12px 0px;
+    line-height: 1.6;
+}
+.search-result a {
+    display: block;
     margin: 12px 0px;
 }
 @media(max-width:996px){
     .search-results-wrapper{
         margin: 12px 50px;
     }
+}
+
+
+/* Courses page */
+.courses-page-widget-area-wrapper{
+    margin: 60px 160px 12px 160px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.courses-page-widget-area-wrapper .swiper-slide {
+    width: 300px;
+    margin-bottom: 60px;
+}
+
+@media (max-width: 996px){ 
+.courses-page-widget-area-wrapper{
+    margin: initial;
+}
 }
 /* WP custom posts -teachers */
 

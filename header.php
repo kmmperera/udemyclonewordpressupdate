@@ -11,10 +11,10 @@
 <div class="header">
         <div class="header-wrapper">
             <div class="header-logo">
-                <img src="<?php echo get_template_directory_uri().'/assets/image/logo.png'?>" alt="">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>">    <img src="<?php echo get_template_directory_uri().'/assets/image/logo.png'?>" alt=""></a>
             </div>
             <div class="header-categories grey-letters">
-               <p class="cate-p"> Categories </p>
+               <p class="cate-p"> More Info </p>
                <div class="header-wp-menu">
                <?php wp_nav_menu(
                     array(

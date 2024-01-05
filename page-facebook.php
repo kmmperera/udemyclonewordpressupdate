@@ -8,7 +8,7 @@
             <nav class="ewt-nav">
                 <div class="ewt-nav-wrapper">
                     <div class="ewt-logo">
-                      <img src="<?php echo get_template_directory_uri() . '/assets/img/logo.png' ?>" alt="">
+                     
                     </div>
                 <?php wp_nav_menu(
                     array(
