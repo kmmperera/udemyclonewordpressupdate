@@ -3,83 +3,83 @@
         <div class="footer-sectione-one">
             <div class="footer-sectione-one-wrappaer">
                 <div class="footer-col">
-                    <a href="">
-                        Udemy Business
+                    <a href="#our-reviews">
+                    What others say
                     </a>
-                    <a href="">
-                        Teach on gaqkelaniya
-                    </a>
-
-                    <a href="">
-                        Get the app
+                    <a href="#new-videos">
+                    What's new
                     </a>
 
-                    <a href="">
-                        About us
+                    <a href="#youtube-playlist">
+                    Youtube lessons
                     </a>
-                    <a href="">
-                        About us
+
+                    <a href="#other-commiunities">
+                        Other commiunities
+                    </a>
+                    <a href="#top-sections-id">
+                        Search
                     </a>
 
                 </div>
 
                 <div class="footer-col">
-                    <a href="">
-                        Contact us
+                    <a href="./sms-alert">
+                        Sms alert
                     </a>
-                    <a href="">
-                        Careers
-                    </a>
-
-                    <a href="">
-                        Blog
+                    <a href="./our-courses">
+                        All courses
                     </a>
 
-                    <a href="">
-                        Help and Support
+                    <a href="./time-tables">
+                        Time tables
+                    </a>
+
+                    <a href="./seminar-series">
+                        Seminars
                     </a>
                     <a href="">
-                        About us
+                        Whatsapp groups
                     </a>
 
                 </div>
                 <div class="footer-col">
-                    <a href="">
-                        Affiliate
+                    <a href="./our-courses">
+                        Our team
                     </a>
-                    <a href="">
-                        Investors
+                    <a href="./our-courses">
+                        Prices
                     </a>
 
-                    <a href="">
+                    <a href="./terms-conditions">
                         Terms
                     </a>
 
-                    <a href="">
+                    <a href="./privacy-policy">
                         Privacy policy
                     </a>
-                    <a href="">
-                        About us
+                    <a href="./privacy-policy">
+                    Cookies policy
                     </a>
 
                 </div>
                 <div class="footer-col">
-                    <a href="">
-                        Privacy policy
+                    <a href="./about-us">
+                       What we do 
                     </a>
-                    <a href="">
-                        Sitemap
-                    </a>
-
-                    <a href="">
-                        Accessibility statement
-                    </a>
-
-                    <a href="">
-                        Cokies policy
-                    </a>
-                    <a href="">
+                    <a href="./about-us">
                         About us
+                    </a>
+
+                    <a href="#">
+                        0771683577
+                    </a>
+
+                    <a href="#">
+                    info@gaqkelaniya.com
+                    </a>
+                    <a href="#our-fb-section-id">
+                        FB groups
                     </a>
 
                 </div>
@@ -94,7 +94,7 @@
                 </div>
                 <div class="footer-second-right">
                     <p>
-                        © 2023 GaqKelaniya, Inc.
+                        ©  St Fransis Lane,Dalugama,Kelaniya.Srilanka.
                     </p>
                 </div>
             </div>

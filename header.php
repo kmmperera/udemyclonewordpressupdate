@@ -35,7 +35,7 @@
                <?php get_search_form(); ?>
             </div>
             <div class="header-one grey-letters">
-                Teach on gaqkelaniya
+               <a href="./join-our-team"> Teach on gaqkelaniya </a>
             </div>
             <div class="header-two">
                 <span>
@@ -46,7 +46,7 @@
 
 
             <div class="header-six">
-                <p>Whatsapp Us</p>
+                <p><a href="./join-our-whatsapp">Whatsapp Us</a></p>
             </div>
             <div class="hamburger-icon">
                 <i class="fa-solid fa-bars"></i>
@@ -76,7 +76,7 @@
                             <p class="tel-p grey-letters">0771683577</p>
                         </div>
                         <div class="whatsapp-btn">
-                            Whatsapp Us
+                         <a href="./join-our-whatsapp">Whatsapp Us</a>
                         </div>
                     </div>
                 </div>

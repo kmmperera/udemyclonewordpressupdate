@@ -65,37 +65,15 @@ register_nav_menus(
 
 function my_sidebars()
 {
-    register_sidebar(
+    
 
-        array(
-
-            'name' => 'Youtube Videos',
-            'id' => 'ewt-youtube-widget',
-            'before_title' => '<h3 class="widget-title">',
-            'after_title' => '</h3>'
-
-        )
-
-    );
+    
 
     register_sidebar(
 
         array(
 
-            'name' => 'Facebook Groups',
-            'id' => 'ewt-facebook-widget',
-            'before_title' => '<h3 class="widget-title">',
-            'after_title' => '</h3>'
-
-        )
-
-    );
-
-    register_sidebar(
-
-        array(
-
-            'name' => 'Our Courses',
+            'name' => 'Our Courses page courses  list',
             'id' => 'ewt-courses-widget',
             'before_title' => '<h3 class="widget-title">',
             'after_title' => '</h3>'
@@ -106,26 +84,13 @@ function my_sidebars()
 
  
 
-    register_sidebar(
-
-        array(
-
-            'name' => 'Courses Slider One',
-            'id' => 'ewt-courses-slider-one-widget',
-            'before_title' => '<h3 class="widget-title-test">',
-            'after_title' => '</h3>',
-            'before_widget' => '<div class="swiper-slide"> <div class="courses-card">',
-            'after_widget' => '</div> </div>'
-
-        )
-
-    );
+   
 
     register_sidebar(
 
         array(
 
-            'name' => 'Tabs Area',
+            'name' => 'Front page courses youtube videos Tabs Area ',
             'id' => 'ewt-tabs-sidebar-widget',
 
 
@@ -139,7 +104,7 @@ function my_sidebars()
 
         array(
 
-            'name' => 'Reviews Area',
+            'name' => 'Front page Reviews Area',
             'id' => 'ewt-reviews-sidebar-widget',
 
 
@@ -153,7 +118,7 @@ function my_sidebars()
 
         array(
 
-            'name' => 'Learners also view Area',
+            'name' => 'Front page Learners also view Area',
             'id' => 'ewt-more-videos-sidebar-widget',
 
 
@@ -181,7 +146,7 @@ function my_sidebars()
 
         array(
 
-            'name' => 'Our Team Area widget',
+            'name' => 'Front page Our Team course Area widget',
             'id' => 'ewt-our-team-sidebar-widget',
 
 
@@ -195,7 +160,7 @@ function my_sidebars()
 
         array(
 
-            'name' => 'About us teachers Area widget',
+            'name' => 'About us page  teachers Area widget',
             'id' => 'ewt-about-us-teachers-sidebar-widget',
 
 

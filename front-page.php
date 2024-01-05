@@ -1,37 +1,33 @@
 <?php get_header(); ?>
     
 <div class="main">
-        <div class="hero-section">
+        <div id="top-sections-id" class="hero-section">
             <div class="hero-wrapper">
                 <div class="swiper hero-swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="hero-image">
-                                <img src="<?php echo get_template_directory_uri() . '/assets/image/hero-one.jpg' ?>"   alt="">
+                                <img src="<?php echo get_template_directory_uri() . '/assets/image/hero-one.png' ?>"   alt="">
                             </div>
                             <div class="hero-text">
-                                <h1>Join us Now
+                                <h1> ආයුබෝවන්
 
                                 </h1>
                                 <p>
-                                    Learn skills from real-world experts from
-                                    <br/> around the globe. Get courses from €12.99
-                                    <br/>through Dec 21.
+                                අපේ වෙබ් අඩවියට ඔබ සාදරයෙන් පිලිගනිමු
                                 </p>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="hero-image">
-                                <img src="<?php echo get_template_directory_uri() . '/assets/image/hero-two.jpg' ?>"     alt="">
+                                <img src="<?php echo get_template_directory_uri() . '/assets/image/hero-two.png' ?>"     alt="">
                             </div>
                             <div class="hero-text">
-                                <h1>Flash Sale on now
+                                <h1>පොත්...
 
                                 </h1>
                                 <p>
-                                    Skill up with courses from €14.99 and save an
-                                    <br/> extra 15% on discounted courses with code
-                                    <br/> 15BONUS. Ends tomorrow.
+                                බාහිර උපාදිය සදහා සටහන් ලබා ගැනීමට
 
 
                                 </p>
@@ -39,16 +35,14 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="hero-image">
-                                <img src="<?php echo get_template_directory_uri() . '/assets/image/hero-three.jpg' ?>"   alt="">
+                                <img src="<?php echo get_template_directory_uri() . '/assets/image/hero-three.png' ?>"   alt="">
                             </div>
                             <div class="hero-text">
                                 <h1>
-                                    Check out new courses
+                                    Whatapp
                                 </h1>
                                 <p>
-                                    Learn skills from real-world experts from
-                                    <br/> around the globe. Get courses from €12.99
-                                    <br/>through Dec 21.
+                                අපගේ Whatapp සමූහයන් හා එක් වන්න 
                                 </p>
                             </div>
                         </div>
@@ -73,7 +67,7 @@
 
         </div>
 
-        <div class="badges-section">
+        <div id="other-commiunities" class="badges-section">
             <div class="badger-wrapper">
                 <div class="badgers-text grey-letters">
                     Our commiunities
@@ -107,7 +101,7 @@
                 </div>
             </div>
         </div>
-        <div class="courses-section">
+        <div id="youtube-playlist" class="courses-section">
             <div class="courses-wrapper">
                 <div class="courses-text">
                     <h2>A broad selection of courses</h2>
@@ -123,7 +117,7 @@
                 <?php endif; ?>
             </div>
         </div>
-        <div class="reviews-section">
+        <div id="our-reviews" class="reviews-section">
             <div class="reviews-wrapper">
                 <div class="reviews-text">
                     <h2>How learners like you are achieving their goals
@@ -158,7 +152,7 @@
                 </div>
             </div>
         </div>
-        <div class="videos-slider-section">
+        <div id="new-videos" class="videos-slider-section">
             <div class="videos-slider-wrapper">
                 <div class="video-slider-text">
                     <h2>Learners are viewing
@@ -190,7 +184,7 @@
                 </div>
             </div>
         </div>
-        <div class="facebook-group-section">
+        <div id="our-fb-section-id" class="facebook-group-section">
             <div class="facebook-group-wrapper">
                 <div class="fb-group-text">
                     <h2> Join our facebook groups </h2>
@@ -216,94 +210,94 @@
         <div class="category-link-section">
             <div class="category-link-wrapper">
                 <div class="category-section-text">
-                    <h2>Featured topics by category </h2>
+                    <h2>Some useful links </h2>
 
                 </div>
                 <div class="category-section-columns">
                     <div class="cat-cols">
 
-                        <h3>Development
+                        <h3>Seminars
                         </h3>
                         <p>
-                            <a href="">Python</a>
-                            <span>12,354,111 learners
+                            <a href="./seminar-series">First Year</a>
+                            <span> seminars for first year
                             </span>
                         </p>
                         <p>
-                            <a href="">Web Development</a>
-                            <span>11,675,234 learners
+                            <a href="./seminar-series">Second Year</a>
+                            <span>seminars for second year
                             </span>
                         </p>
                         <p>
-                            <a href="">Machine Learning</a>
-                            <span>10,453,123 learners
+                            <a href="./seminar-series">Third Year</a>
+                            <span>seminars for third year
                             </span>
                         </p>
                     </div>
                     <div class="cat-cols">
 
-                        <h3>Business
+                        <h3>Time tables
                         </h3>
                         <p>
-                            <a href="">Financial Analysis</a>
-                            <span>34,567,123 learners
+                            <a href="./time-tables">First Year</a>
+                            <span>Time tables for first year
                             </span>
                         </p>
                         <p>
-                            <a href="">SQL</a>
-                            <span>23,789,12 learners
+                            <a href="./time-tables">Second Year</a>
+                            <span>Time tables for second year
                             </span>
                         </p>
                         <p>
-                            <a href="">PMP</a>
-                            <span>36,354,994 learners
+                            <a href="./time-tables">Third Year</a>
+                            <span>Time tables for third year
                             </span>
                         </p>
                     </div>
                     <div class="cat-cols">
 
-                        <h3>IT and Software
+                        <h3>Whatsapp Groups
                         </h3>
                         <p>
-                            <a href="">Amazon AWS</a>
-                            <span>56,123,567 learners
+                            <a href="./join-our-whatsapp">First Year</a>
+                            <span>Whatsapp group for first year
                             </span>
                         </p>
                         <p>
-                            <a href="">Ethical Hacking</a>
-                            <span>89,123,111 learners
+                            <a href="./join-our-whatsapp">Second Year</a>
+                            <span>Whatsapp group for second year
                             </span>
                         </p>
                         <p>
-                            <a href="">Cyber Security</a>
-                            <span>36,354,994 learners
+                            <a href="./join-our-whatsapp">Third Year</a>
+                            <span>Whatsapp group for third year
                             </span>
                         </p>
                     </div>
                     <div class="cat-cols">
 
-                        <h3>Design
+                        <h3>Our courses
                         </h3>
                         <p>
-                            <a href="">Photoshop</a>
-                            <span>36,354,994 learners
+                            <a href="./our-courses">Sociology</a>
+                            <span>සමාජ විද්‍යාව 
                             </span>
                         </p>
                         <p>
-                            <a href="">Graphic Design</a>
-                            <span>56,234,000 learners
+                            <a href="./our-courses">Archaeology</a>
+                            <span>පුරාවිද්‍යාව
                             </span>
                         </p>
                         <p>
-                            <a href="">Drawing</a>
-                            <span>11,555,111 learners
+                            <a href="./our-courses">Geography</a>
+                            <span>භූගෝල විද්‍යාව
                             </span>
                         </p>
                     </div>
 
                 </div>
                 <div class="explore-more-btn explore-btn">
-                    Explore more topics
+                   <a href="./about-us"> Explore more about us </a>
                 </div>
             </div>
         </div>
@@ -320,26 +314,26 @@
                     <ul>
                         <li>
                             <i class="fa-solid fa-circle"></i>
-                            Unlimited access to 25,000+ top Udemy courses, anytime, anywhere
+                            Unlimited access to 30 lecture programmes,all online!
 
                         </li>
                         <li>
                             <i class="fa-solid fa-circle"></i>
-                            International course collection in 14 languages
+                           More than  2800 students island wide
 
                         </li>
                         <li>
                             <i class="fa-solid fa-circle"></i>
-                            Top certifications in tech and business
+                            11 qualified lectures
 
                         </li>
                     </ul>
                     <div class="more-info-buttons">
                         <div class="more-info-left-btn dark-btn">
-                            Enroll Now
+                          <a class="div-to-a" href="./enroll-now">  Enroll Now </a>
                         </div>
                         <div class="more-info-right-btn explore-btn">
-                            Learn More
+                        <a class="div-to-a" href="./about-us">   Learn More </a>
                         </div>
                     </div>
 
@@ -394,12 +388,12 @@
 
                     </h1>
                     <p>
-                        Instructors from around the world teach millions of learners on Udemy. We provide the tools and skills to teach what you
+                        Instructors from around the island teach tons of content on Gaqkelaniya. We provide the tools and skills to teach what you
                         love.
 
                     </p>
                     <div class="start-teaching-btn dark-btn">
-                        Start teaching today
+                      <a href="./join-our-team">  Start teaching today </a>
                     </div>
                 </div>
             </div>

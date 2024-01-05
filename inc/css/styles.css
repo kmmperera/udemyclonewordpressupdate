@@ -26,7 +26,10 @@ body{
     border-bottom: 1px solid #fafafa;
    
 }
-
+.div-to-a{
+    text-decoration: none;
+    color: inherit;
+}
 /* Header */
 
 .header{
@@ -90,6 +93,14 @@ body{
 .header-one{
     width: 155px;
 }
+.header-one a{
+   text-decoration: none;
+   color: #2d2f31;
+}
+.header-one a:hover{
+   
+    color: #5624d0;
+ }
 .header-two{
     width: 200px;
     margin-left: 20px;
@@ -104,6 +115,10 @@ body{
   font-weight: 700;
   padding: 14px;
   text-align: center;
+}
+.header-six a{
+    text-decoration: none;
+    color: #fff;
 }
 .tel-p{
     display: inline-block;
@@ -181,6 +196,10 @@ body{
     justify-content: center;
     margin-top: 24px;
     margin-bottom: 100px;
+}
+.whatsapp-btn a{
+    text-decoration: none;
+    color: inherit;
 }
 .tele-number{
     margin: 0px auto;
@@ -788,6 +807,10 @@ body{
     padding-top: 60px;
     padding-bottom: 60px;
 }
+.category-link-section .explore-more-btn a{
+    text-decoration: none;
+    color: inherit;
+}
 .category-link-wrapper{
     padding: 0px 48px;
 }
@@ -1046,6 +1069,10 @@ body{
     margin-top: 24px;
     width: 180px;
    
+}
+.start-teaching-btn a{
+    text-decoration: none;
+    color: #fff;
 }
 @media(max-width:996px){
     .join-us-wrapper{
