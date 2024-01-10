@@ -3,71 +3,71 @@
         <div class="footer-sectione-one">
             <div class="footer-sectione-one-wrappaer">
                 <div class="footer-col">
-                    <a href="#our-reviews">
+                    <a href="<?php echo home_url();?>#our-reviews">
                     What others say
                     </a>
-                    <a href="#new-videos">
+                    <a href="<?php echo home_url();?>#new-videos">
                     What's new
                     </a>
 
-                    <a href="#youtube-playlist">
+                    <a href="<?php echo home_url();?>#youtube-playlist">
                     Youtube lessons
                     </a>
 
-                    <a href="#other-commiunities">
+                    <a href="<?php echo home_url();?>#other-commiunities">
                         Other commiunities
                     </a>
-                    <a href="#top-sections-id">
+                    <a href="<?php echo home_url();?>#top-sections-id">
                         Search
                     </a>
 
                 </div>
 
                 <div class="footer-col">
-                    <a href="./sms-alert">
+                    <a href="<?php echo home_url();?>/sms-alert">
                         Sms alert
                     </a>
-                    <a href="./our-courses">
+                    <a href="<?php echo home_url();?>/our-courses">
                         All courses
                     </a>
 
-                    <a href="./time-tables">
+                    <a href="<?php echo home_url();?>/time-tables">
                         Time tables
                     </a>
 
-                    <a href="./seminar-series">
+                    <a href="<?php echo home_url();?>/seminar-series">
                         Seminars
                     </a>
-                    <a href="">
+                    <a href="<?php echo home_url();?>/join-our-whatsapp">
                         Whatsapp groups
                     </a>
 
                 </div>
                 <div class="footer-col">
-                    <a href="./our-courses">
+                    <a href="<?php echo home_url();?>/our-courses">
                         Our team
                     </a>
-                    <a href="./our-courses">
+                    <a href="<?php echo home_url();?>/our-courses">
                         Prices
                     </a>
 
-                    <a href="./terms-conditions">
+                    <a href="<?php echo home_url();?>/terms-conditions">
                         Terms
                     </a>
 
-                    <a href="./privacy-policy">
+                    <a href="<?php echo home_url();?>/privacy-policy">
                         Privacy policy
                     </a>
-                    <a href="./privacy-policy">
+                    <a href="<?php echo home_url();?>/privacy-policy">
                     Cookies policy
                     </a>
 
                 </div>
                 <div class="footer-col">
-                    <a href="./about-us">
+                    <a href="<?php echo home_url();?>//about-us">
                        What we do 
                     </a>
-                    <a href="./about-us">
+                    <a href="<?php echo home_url();?>/about-us">
                         About us
                     </a>
 
@@ -78,7 +78,7 @@
                     <a href="#">
                     info@gaqkelaniya.com
                     </a>
-                    <a href="#our-fb-section-id">
+                    <a href="<?php echo home_url();?>#our-fb-section-id">
                         FB groups
                     </a>
 

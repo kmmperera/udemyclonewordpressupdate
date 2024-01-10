@@ -1,41 +1,28 @@
 <?php /* Template Name: Facebook  Template */ ?>
 
 <?php get_header(); ?>
-<div class="menu-wrapper">
-   <div class="ewt-wrapper">
-        <div class="hero-area">
-        
-            <nav class="ewt-nav">
-                <div class="ewt-nav-wrapper">
-                    <div class="ewt-logo">
-                      <img src="<?php echo get_template_directory_uri() . '/assets/img/logo.png' ?>" alt="">
-                    </div>
-                
-               </div>
-            </nav>
-
-
-        </div>
-    </div>
+<div class="page-margin-div">
+   
  </div>
+ <div class="whatsapp-description">
+    <div class="whatsapp-description-wrapper">
+        <div class="whatsapp-description-texts">
+             <h1 class="normal-page-title"><?php the_title(); ?></h1>
+             <div class="teacher-thumbnail">
+						
+                        <img src="<?php the_post_thumbnail_url('blog-large');?>" alt="<?php the_title();?>" class="img-fluid mb-3 img-thumbnail">
+                    
+            </div>
 
-<section class="pagesection">
-        <div class="pagecontatentwrapper">
-            
-        <h1><?php the_title(); ?></h1>
-
-        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
             <?php the_content(); ?>
 
-        <?php endwhile;
-        else : endif; ?>
-
-
-
+            <?php endwhile;
+            else : endif; ?>
         </div>
-       
+    </div>
+</div>
 
-</section>
 				
 <?php get_footer(); ?>

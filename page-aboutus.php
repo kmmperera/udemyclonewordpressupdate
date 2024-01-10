@@ -104,9 +104,9 @@
 </div>
 <div class="about-us-teachers-widget">
     <div class="about-us-teachers-wrapper justify-center">
-                        <?php if (is_active_sidebar('ewt-about-us-teachers-sidebar-widget')) : ?>
+                        <?php if (is_active_sidebar('ewt-courses-widget')) : ?>
                         
-                        <?php dynamic_sidebar('ewt-about-us-teachers-sidebar-widget'); ?>
+                        <?php dynamic_sidebar('ewt-courses-widget'); ?>
 
                         <?php endif; ?>
     </div>
@@ -136,7 +136,7 @@
             </p>
         </div>
         <div class="sms-right">
-            <a href="">SUBSCRIBE</a>
+            <a href="<?php echo home_url();?>/sms-alert">SUBSCRIBE</a>
         </div>
     </div>
 </div>

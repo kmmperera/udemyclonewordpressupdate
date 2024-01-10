@@ -24,7 +24,7 @@
                             </div>
                             <div class="hero-text">
                                 <h1>
-                                    <a class="hero-pic-btns" href="./get-books">Order now</a>
+                                    <a class="hero-pic-btns" href="./buy-books">Order now</a>
 
                                 </h1>
                                 <p>
@@ -41,7 +41,7 @@
                             </div>
                             <div class="hero-text">
                                 <h1>
-                                <a class="hero-pic-btns" href="./join-our-whatsapp">  Join now </a>
+                                <a class="hero-pic-btns" href="<?php echo home_url();?>/join-our-whatsapp">  Join now </a>
                                 </h1>
                                 <p>
                                 අපගේ Whatapp සමූහයන් හා එක් වන්න 
@@ -332,7 +332,7 @@
                     </ul>
                     <div class="more-info-buttons">
                         <div class="more-info-left-btn dark-btn">
-                          <a class="div-to-a" href="./enroll-now">  Enroll Now </a>
+                          <a class="div-to-a" href="./our-courses">  Enroll Now </a>
                         </div>
                         <div class="more-info-right-btn explore-btn">
                         <a class="div-to-a" href="./about-us">   Learn More </a>
@@ -353,9 +353,9 @@
                     <div class="swiper our-team-swiper">
                         <div class="swiper-wrapper">
                           
-                        <?php if (is_active_sidebar('ewt-our-team-sidebar-widget')) : ?>
+                        <?php if (is_active_sidebar('ewt-courses-widget')) : ?>
                         
-                        <?php dynamic_sidebar('ewt-our-team-sidebar-widget'); ?>
+                        <?php dynamic_sidebar('ewt-courses-widget'); ?>
 
                         <?php endif; ?>
 

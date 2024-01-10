@@ -75,10 +75,10 @@ const swiperReviews = new Swiper(".swiper-reviews", {
     },
     breakpoints: {
         567: {
-            slidesPerView: 2,
+            slidesPerView: 1,
         },
         996: {
-            slidesPerView: 3,
+            slidesPerView: 2,
         },
     },
 });

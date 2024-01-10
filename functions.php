@@ -8,7 +8,7 @@ function load_css()
     $num1 = rand(1, 999);
     $num2 = rand(1, 999);
     $num3 = ($num1 + $num2) / 2;
-    wp_register_style('maincss', get_template_directory_uri() . '/inc/css/styles.css', array(), '1.0.0', 'all');
+    wp_register_style('maincss', get_template_directory_uri() . '/inc/css/styles.css', array(),'1.0.1', 'all');
     wp_enqueue_style('maincss');
 
     wp_register_style('fontawesome-css', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css', '', '1.0.0', 'all');
@@ -21,7 +21,7 @@ function load_css()
     wp_register_style('ewtgooglefontscss', 'https://fonts.googleapis.com/css2?family=Assistant:wght@500;600;700;800&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap', false);
     wp_enqueue_style('ewtgooglefontscss');
 
-    wp_register_script('mainjs', get_template_directory_uri() . '/inc/js/main.js', array('jquery'), '1.0.20', true);
+    wp_register_script('mainjs', get_template_directory_uri() . '/inc/js/main.js', array('jquery'), '1.0.30', true);
     wp_enqueue_script('mainjs');
 
     wp_register_script('swiperjscdn', 'https://unpkg.com/swiper/swiper-bundle.min.js', '1.0.16', true);
@@ -142,33 +142,9 @@ function my_sidebars()
 
     );
 
-    register_sidebar(
+   
 
-        array(
-
-            'name' => 'Front page Our Team course Area widget',
-            'id' => 'ewt-our-team-sidebar-widget',
-
-
-
-
-        )
-
-    );
-
-    register_sidebar(
-
-        array(
-
-            'name' => 'About us page  teachers Area widget',
-            'id' => 'ewt-about-us-teachers-sidebar-widget',
-
-
-
-
-        )
-
-    );
+  
 
     register_sidebar(
 

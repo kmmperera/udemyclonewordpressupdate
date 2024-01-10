@@ -690,6 +690,9 @@ body{
 .reviews-slide-part-one p{
     height: 160px;
     overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .reviews-slide-part-two{
     margin-bottom: 24px;
@@ -744,14 +747,14 @@ body{
 }
 .reviews-custom-button-prev {
     position: absolute;
-    bottom: 50%;
+    bottom: 40%;
     left: 0px;
     z-index: 10;
     transform: translate(-50%,-50%);
 }
 .reviews-custom-button-next{
     position: absolute;
-    bottom: 50%;
+    bottom: 40%;
     right: 0px;
     z-index: 10;
     transform: translate(50%,-50%);
@@ -822,7 +825,8 @@ body{
 }
 .fb-group-link{
     min-width: 23%;
-    height: 250px;
+    height: 300px;
+    width: 300px;
    
     display: block;
     background-color:#f7f9fa;
@@ -1196,6 +1200,12 @@ body{
 }
 
 /* WP Custom CSS - Page */
+.page-margin-div{
+    margin-top: 90px;
+}
+.normal-page-title{
+    text-align: center;
+}
 .ewt-page-title{
     text-align: center;
     margin-top: 48px;
@@ -1437,7 +1447,12 @@ body{
     
 }
 
-
+/*  Widgets */
+.time-table-widget-heading-h2{
+    margin: 90px 0px 24px 0px;
+    text-align: center;
+    display: block;
+}
 
 /* Common mobile css */
 

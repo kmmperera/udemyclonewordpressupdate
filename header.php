@@ -46,7 +46,7 @@
 
 
             <div class="header-six">
-                <p><a href="./join-our-whatsapp">Whatsapp Us</a></p>
+                <p><a href="<?php echo home_url();?>/join-our-whatsapp">Whatsapp Us</a></p>
             </div>
             <div class="hamburger-icon">
                 <i class="fa-solid fa-bars"></i>
@@ -76,7 +76,7 @@
                             <p class="tel-p grey-letters">0771683577</p>
                         </div>
                         <div class="whatsapp-btn">
-                         <a href="./join-our-whatsapp">Whatsapp Us</a>
+                         <a href="<?php echo home_url();?>/join-our-whatsapp">Whatsapp Us</a>
                         </div>
                     </div>
                 </div>
