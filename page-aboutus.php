@@ -111,6 +111,10 @@
                         <?php endif; ?>
     </div>
 </div>
+<div class="see-all-members">
+                    <a class="see-all-a" href="<?php echo home_url();?>/category/teachers">Check All Lecturers</a>
+</div>
+
 <div class="about-us-why-us">
     <div class="about-us-why-us-wrapper">
         

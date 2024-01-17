@@ -29,6 +29,8 @@ body{
 .div-to-a{
     text-decoration: none;
     color: inherit;
+    display: inline-block;
+    width:100%;
 }
 /* Header */
 
@@ -1171,6 +1173,30 @@ body{
    border-radius: 50%;
     
 }
+.see-all-members{
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+}
+.see-all-a{
+    display: inline-block;
+    text-decoration: none;
+    color:#2d2f31;
+    border: 1px solid #2d2f31;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 16px;
+    margin-top: 48px;
+}
+.see-all-a:hover{
+    background-color: #d1d7dc;
+}
+
+
+
+
+
+
 @media(max-width:567px){
     .team-wrapper{
         max-width: 550px;

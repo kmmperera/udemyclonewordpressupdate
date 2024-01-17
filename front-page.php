@@ -106,7 +106,7 @@
                     </ul>
                     <div class="more-info-buttons">
                         <div class="more-info-left-btn dark-btn">
-                          <a class="div-to-a" href="./our-courses">  Enroll Now </a>
+                          <a class="div-to-a" href="./enroll-now">  Enroll Now </a>
                         </div>
                         <div class="more-info-right-btn explore-btn">
                         <a class="div-to-a" href="./about-us">   Learn More </a>
@@ -351,6 +351,9 @@
 
 
 
+                </div>
+                <div class="see-all-members">
+                    <a class="see-all-a" href="<?php echo home_url();?>/category/teachers">Check All Lecturers</a>
                 </div>
             </div>
         </div>
