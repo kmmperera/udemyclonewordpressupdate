@@ -200,6 +200,8 @@ body{
 .whatsapp-btn a{
     text-decoration: none;
     color: inherit;
+	display:inline-block;
+	width:100%;
 }
 .tele-number{
     margin: 0px auto;
@@ -294,7 +296,7 @@ body{
         background-color:black;
         opacity: 0.7;
     }
-    .header-one ,.header-two , .header-three , .header-four , .header-five , .header-six , .header-search{
+    .header-one , .header-three , .header-four , .header-five , .header-six , .header-search{
         display: none;
     }
     .hamburger-icon{
@@ -428,7 +430,14 @@ body{
     .hero-text{
         position: initial;
         transform: initial;
+		
         margin: 0px auto;
+		width: initial;
+        
+        display: flex;
+     	flex-direction: column;
+		
+		
 
     }
     .hero-text h1{
@@ -455,6 +464,74 @@ body{
         border-radius: 0;
     }
 }
+/* Quick links section   */
+.quick-links-section{
+  
+}
+.quick-links-section-wrapper{
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    align-items: center;
+    margin: 0px 48px;
+   
+  
+}
+.quick-links-section-wrapper > div{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.quick-link-texts a{
+    text-decoration: none;
+}
+.quick-link-texts a h3{
+    color: #2d2f31;
+}
+.quick-text-description p{
+    color:#5624d0;
+}
+.quick-link-texts:hover{
+  opacity: 0.9;
+}
+.quick-link-icon i{
+    font-size: 24px;
+
+}
+@media(max-width:860px){
+    .quick-links-section-wrapper{
+        flex-direction: column;
+       
+        align-items: center;
+        margin-top: 24px;
+        margin-bottom: 48px;
+    }
+    .quick-links-section-wrapper > div{
+        text-align: center;
+        margin-bottom: 24px;
+    }
+    .quick-link-texts a h3{
+        width: 140px;
+        font-weight: 700;
+       
+        border: 1px solid #2d2f31;
+       
+       padding: 8px 4px;
+        margin: 0px auto;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    .quick-text-description p{
+        margin-top: 2px;
+    }
+    .quick-link-texts a h3:hover{
+       background-color: #d1d7dc;
+    }
+    .quick-link-icon {
+        display: none;
+    }
+}
+
 /* Badger slides */
 .badges-section{
     background-color: #f7f9fa;
@@ -481,6 +558,15 @@ body{
 .badgers-text{
     text-align: center;
     margin-bottom: 24px;
+}
+@media(max-width:700px){
+    .badgers-images{
+
+      
+        justify-content: center;
+        
+    }
+   
 }
 @media(max-width:567px){
     .badgers-images{
@@ -691,7 +777,7 @@ body{
     height: 160px;
     overflow-y: auto;
     display: flex;
-    align-items: center;
+    align-items:center;
     justify-content: center;
 }
 .reviews-slide-part-two{
@@ -759,6 +845,12 @@ body{
     z-index: 10;
     transform: translate(50%,-50%);
 }
+@media(max-width:700px){
+   
+	.reviews-slide-part-one p{
+		align-items:initial;
+	}
+}
 @media(max-width:567px){
     .reviews-wrapper{
         padding: 0;
@@ -767,6 +859,9 @@ body{
         width: 75%;
       
     }
+	.reviews-slide-part-one p{
+		align-items:initial;
+	}
 }
 /* video slider */
 .videos-custom-button-prev{
@@ -963,6 +1058,11 @@ body{
         margin: 0;
     }
 }
+@media(max-width:860px){
+    .more-info-section{
+        margin-top: 140px;
+    }
+}
 @media(max-width:714px){
     .more-info-wrapper{
        
@@ -1029,6 +1129,8 @@ body{
 .more-info-instructor a{
     text-decoration: none;
     color: #fff;
+	display:inline-block;
+	width:100%;
 }
 .team-member-left{
     flex: 3;
@@ -1200,6 +1302,9 @@ body{
 }
 
 /* WP Custom CSS - Page */
+.indexpagesection {
+    margin-top: 100px;
+}
 .page-margin-div{
     margin-top: 90px;
 }
@@ -1418,6 +1523,130 @@ body{
     margin: initial;
 }
 }
+
+/* Category pages*/
+
+.main-container{
+    margin-top: 100px;
+}
+.main-wrapper{
+    padding: 24px 160px;
+}
+.cat-description-h{
+    text-align: center;
+    margin-bottom: 60px;
+}
+.cat-featured-img{
+    display: block;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 24px 0px;
+}
+
+.cat-section-wrapper .books{
+    
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+
+}
+.cat-section-wrapper .teachers{
+   
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+
+}
+
+.cat-read-more{
+    display: block;
+    margin-top: 24px;
+}
+.timetables .category-page-loop-all-wrapper{
+    margin-bottom: 48px;
+   
+}
+.teachers .category-page-loop-all-wrapper{
+    margin-bottom: 48px;
+    width: 200px;
+}
+.books .category-page-loop-all-wrapper{
+    margin-bottom: 48px;
+    width: 200px;
+}
+.timetables h3{
+    margin: 12px 0px;
+}
+.timetables .cat-featured-img{
+    width: 90% !important;
+    height: auto !important;
+}
+.cat-result-post-title{
+    text-align: center;
+}
+@media(max-width:900px){
+    .main-wrapper{
+        padding: 24px 50px;
+    }
+    .cat-type-cls{
+        justify-content: center !important;
+        width: initial !important;
+    }
+   
+}
+/* Single page */
+
+.postsection .books {
+
+}
+
+.postsection .timetable {
+
+}
+
+.postsection.teachers .teacher-thumbnail {
+    display: inline-block;
+    width:40%;
+    vertical-align:top; 
+}
+.postsection.teachers .teacher-thumbnail img {
+    
+    max-width:300px !important;
+}
+.postsection.teachers .teacher-content-div {
+    display: inline-block;
+    width:50%;
+    vertical-align:top; 
+    float:right;
+}
+.postsection.teachers .ewt-page-title{
+    margin-bottom: 24px;
+}
+.postsection.teachers .description-text-wrapper{
+    margin: initial !important;
+}
+
+@media(max-width:900px){
+    .postsection.teachers .teacher-thumbnail {
+        display: block;
+        margin: 24px auto;
+        width: 90%;
+        
+    }
+    .postsection.teachers .teacher-content-div {
+        display: block;
+        margin: 24px auto;
+        width: 90%;
+        float: initial !important;
+    }
+
+}
+
+
+
 /* WP custom posts -teachers */
 
 
@@ -1454,6 +1683,71 @@ body{
     display: block;
 }
 
+/* Degree widget */
+.degree-widget-container{
+    
+    width: 200px;
+    margin-bottom: 60px;
+}
+.degree-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 90px;
+}
+.degree-books , .degree-subjects , .degree-help{
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top:12px;
+    color: #1c1d1f;
+    border: 1px solid #2d2f31;
+    text-align: center;
+    padding: 8px 4px; 
+    font-weight: 700;
+
+}
+.degree-joinnow{
+    color: #fff !important;
+    background-color: #1c1d1f ;
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top:12px;
+    
+    border: 1px solid #2d2f31;
+    text-align: center;
+    padding: 8px 4px; 
+    font-weight: 700;
+
+}
+
+.degree-books:hover , .degree-subjects:hover , .degree-help:hover{
+    background-color: #d1d7dc;
+}
+.degree-joinnow:hover{
+    opacity: 0.8;
+}
+.degree-image{
+    height: 200px;
+}
+.degree-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.degree-description{
+    font-size: 14px;
+    font-weight: 700;
+    margin: 12px 0px;
+    color: #5624d0;
+}
+@media(max-width:610px){
+    .degree-wrapper{
+        justify-content: center;
+    }
+}
 /* Common mobile css */
 
 @media(max-width:996px){

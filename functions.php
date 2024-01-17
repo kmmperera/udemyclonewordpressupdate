@@ -2,13 +2,29 @@
 
 
 
+function ewt_mytheme_setup() {
+    // Add theme support for various features here
+   add_theme_support( 'title-tag' );
+    add_theme_support('post-thumbnails');
+}
+add_action( 'after_setup_theme', 'ewt_mytheme_setup' );
+
+// remove_action( 'wp_head', '_wp_render_title_tag', 1 );
+
+add_action('init','get_cat_func');
+function get_cat_func() { 
+    global $wp; 
+    $wp->add_query_var('category'); 
+}
+
+
 // Load Stylesheets
 function load_css()
 {
     $num1 = rand(1, 999);
     $num2 = rand(1, 999);
     $num3 = ($num1 + $num2) / 2;
-    wp_register_style('maincss', get_template_directory_uri() . '/inc/css/styles.css', array(),'1.0.1', 'all');
+    wp_register_style('maincss', get_template_directory_uri() . '/inc/css/styles.css', array(), $num3, 'all');
     wp_enqueue_style('maincss');
 
     wp_register_style('fontawesome-css', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css', '', '1.0.0', 'all');
@@ -67,7 +83,19 @@ function my_sidebars()
 {
     
 
-    
+    register_sidebar(
+
+        array(
+
+            'name' => 'Front page slider Area widget',
+            'id' => 'ewt-front-page-slider-sidebar-widget',
+
+
+
+
+        )
+
+    );
 
     register_sidebar(
 
@@ -188,6 +216,113 @@ function my_sidebars()
 
     );
 
+    register_sidebar(
+
+        array(
+
+            'name' => 'Enroll now Page Degree Area widget',
+            'id' => 'ewt-enrollnow-page-degree-sidebar-widget',
+
+
+
+
+        )
+
+    );
+
+
+    register_sidebar(
+
+        array(
+
+            'name' => 'Art Time table Page Buttons Area widget',
+            'id' => 'ewt-art-time-table-buttons-sidebar-widget',
+
+
+
+
+        )
+
+    );
+
+    register_sidebar(
+
+        array(
+
+            'name' => 'Science General Time table Page Buttons Area widget',
+            'id' => 'ewt-science-general-time-table-buttons-sidebar-widget',
+
+
+
+
+        )
+
+    );
+
+    register_sidebar(
+
+        array(
+
+            'name' => 'Science physiotheraphy Time table Page Buttons Area widget',
+            'id' => 'ewt-science-physiotheraphy-time-table-buttons-sidebar-widget',
+
+
+
+
+        )
+
+    );
+
+    register_sidebar(
+
+        array(
+
+            'name' => 'Science occupational theraphy Time table Page Buttons Area widget',
+            'id' => 'ewt-science-occupational-theraphy-time-table-buttons-sidebar-widget',
+
+
+
+
+        )
+
+    );
+
+    register_sidebar(
+
+        array(
+
+            'name' => 'Business Time table Page Buttons Area widget',
+            'id' => 'ewt-business-time-table-buttons-sidebar-widget',
+
+
+
+
+        )
+
+    );
+
+    register_sidebar(
+
+        array(
+
+            'name' => 'Commerce Time table Page Buttons Area widget',
+            'id' => 'ewt-commerce-time-table-buttons-sidebar-widget',
+
+
+
+
+        )
+
+    );
+
+
+   
+
+    
+
+
+   
+
     
 
 }
@@ -203,7 +338,8 @@ add_action('widgets_init', 'my_sidebars');
 
 
 
-add_theme_support('post-thumbnails');
+
+
 
 
 
@@ -225,6 +361,7 @@ function ewt_teachers_post_type()
         'has_archive' => true,
         'menu_icon' => 'dashicons-images-alt2',
         'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
+         'taxonomies' => array( 'category', 'post_tag' )
 
     );
 
@@ -1496,6 +1633,332 @@ function ewt_display_button_link_widget()
     register_widget('ewt_Button_link');
 }
 add_action('widgets_init', 'ewt_display_button_link_widget');
+
+
+class ewt_Front_page_slider extends WP_Widget
+{
+
+    function __construct()
+    {
+        parent::__construct(
+         
+        // Base ID of your widget
+            'ewt_front_page_slider_widget', 
+         
+        // Widget name will appear in UI
+            __('Front page Slider Widget', 'ElegantWUni'), 
+         
+        // Widget description
+            array('description' => __(' widget for dispaly front page slider', 'ElegantWUni'), )
+        );
+    }
+         
+        // Creating widget front-end
+
+    public function widget($args, $instance)
+    {
+        $slider_image = apply_filters('widget_title', $instance['slider_image']);
+        $slider_link = apply_filters('widget_title', $instance['slider_link']);
+        $slider_link_text = apply_filters('widget_title', $instance['slider_link_text']);
+        $slider_description = apply_filters('widget_title', $instance['slider_description']);
+
+
+       
+         $args['before_widget'] = '<div class="swiper-slide">';
+
+
+         $args['after_widget'] = '</div>';
+        
+        // before and after widget arguments are defined by themes
+        echo $args['before_widget'];
+
+        if (!empty($slider_image)){ 
+            echo '<div class="hero-image">
+                     <img src=" '.$slider_image.' "   alt="">
+                 </div>';
+        }
+        if (!empty($slider_link) && !empty($slider_link_text) && !empty($slider_description) ){ 
+            echo ' <div class="hero-text">
+                        <h1>
+                            <a class="hero-pic-btns" href="'.$slider_link.'">  '.$slider_link_text.' </a>
+                         </h1>
+                        <p>
+                        '.$slider_description.' 
+                         </p>
+                    </div>';
+
+        }  
+        
+        
+        
+         echo $args['after_widget'];
+    }
+         
+        // Widget Backend
+    public function form($instance)
+    {
+        
+        $slider_image = !empty($instance['slider_image']) ? $instance['slider_image'] : '';
+        $slider_link = !empty($instance['slider_link']) ? $instance['slider_link'] : 'Enter link';
+        $slider_link_text = !empty($instance['slider_link_text']) ? $instance['slider_link_text'] : '';
+        $slider_description = !empty($instance['slider_description']) ? $instance['slider_description'] : '';
+
+
+
+      
+
+    
+        // Widget admin form
+        ?>
+        <p>
+        <label for="<?php echo $this->get_field_id('slider_link'); ?>"><?php _e(' Link:'); ?></label>
+        <input class="widefat" id="<?php echo $this->get_field_id('slider_link'); ?>" name="<?php echo $this->get_field_name('slider_link'); ?>" type="text" value="<?php echo esc_attr($slider_link); ?>" />
+        </p>
+
+        <p>
+        <label for="<?php echo $this->get_field_id('slider_link_text'); ?>"><?php _e(' Caption:'); ?></label>
+        <input class="widefat" id="<?php echo $this->get_field_id('slider_link_text'); ?>" name="<?php echo $this->get_field_name('slider_link_text'); ?>" type="text" value="<?php echo esc_attr($slider_link_text); ?>" />
+        </p>
+
+        <p>
+        <label for="<?php echo $this->get_field_id('slider_description'); ?>"><?php _e(' Description:'); ?></label>
+        <input class="widefat" id="<?php echo $this->get_field_id('slider_description'); ?>" name="<?php echo $this->get_field_name('slider_description'); ?>" type="text" value="<?php echo esc_attr($slider_description); ?>" />
+        </p>
+
+        <p>
+	        <label for="<?php echo esc_attr($this->get_field_id('slider_image')); ?>"><?php esc_attr_e('Image:', 'ElegantWUni'); ?></label> 
+		    <input class="widefat image-upload" id="<?php echo esc_attr($this->get_field_id('slider_image')); ?>" name="<?php echo esc_attr($this->get_field_name('slider_image')); ?>" type="text" value="<?php echo esc_url($slider_image); ?>">
+		    <button type="button" class="button button-primary js-image-upload">Select Image</button>
+	    </p>
+
+    
+        
+
+        
+        <?php
+
+    }
+         
+        // Updating widget replacing old instances with new
+    public function update($new_instance, $old_instance)
+    {
+        $instance = array();
+        $instance['slider_image'] = (!empty($new_instance['slider_image'])) ? strip_tags($new_instance['slider_image']) : '';
+        $instance['slider_link'] = (!empty($new_instance['slider_link'])) ? strip_tags($new_instance['slider_link']) : '';
+        $instance['slider_link_text'] = (!empty($new_instance['slider_link_text'])) ? strip_tags($new_instance['slider_link_text']) : '';
+        $instance['slider_description'] = (!empty($new_instance['slider_description'])) ? strip_tags($new_instance['slider_description']) : '';
+
+
+
+
+        return $instance;
+    }
+         
+        // Class wpb_widget ends here
+} 
+         
+        // Register and load the widget
+function ewt_display_front_page_slider_widget()
+{
+    register_widget('ewt_Front_page_slider');
+}
+add_action('widgets_init', 'ewt_display_front_page_slider_widget');
+
+
+class ewt_Enrollnow_page_degree extends WP_Widget
+{
+
+    function __construct()
+    {
+        parent::__construct(
+         
+        // Base ID of your widget
+            'ewt_enrollnow_page_degree_widget', 
+         
+        // Widget name will appear in UI
+            __('Enroll now  page Degree Widget', 'ElegantWUni'), 
+         
+        // Widget description
+            array('description' => __(' widget for dispaly Enroll now page Degrees', 'ElegantWUni'), )
+        );
+    }
+         
+        // Creating widget front-end
+
+    public function widget($args, $instance)
+    {
+        $degree_image = apply_filters('widget_title', $instance['degree_image']);
+        $degree_name = apply_filters('widget_title', $instance['degree_name']);
+        $degree_description = apply_filters('widget_title', $instance['degree_description']);
+        $degree_joinnow_text = apply_filters('widget_title', $instance['degree_joinnow_text']);
+        $degree_joinnow_link = apply_filters('widget_title', $instance['degree_joinnow_link']);
+        $degree_help_text = apply_filters('widget_title', $instance['degree_help_text']);
+        $degree_help_link = apply_filters('widget_title', $instance['degree_help_link']);
+        $degree_books_text = apply_filters('widget_title', $instance['degree_books_text']);
+        $degree_books_link = apply_filters('widget_title', $instance['degree_books_link']);
+        $degree_subjects_link = apply_filters('widget_title', $instance['degree_subjects_link']);
+        $degree_subjects_text = apply_filters('widget_title', $instance['degree_subjects_text']);
+
+
+       
+         $args['before_widget'] = '<div class="degree-widget-container">';
+
+
+         $args['after_widget'] = '</div>';
+        
+        // before and after widget arguments are defined by themes
+        echo $args['before_widget'];
+
+        if (!empty($degree_image)){ 
+            echo '<div class="degree-image">
+                     <img src=" '.$degree_image.' "   alt="">
+                 </div>';
+        }
+        if (!empty($degree_description)){ 
+            echo '<p class="degree-description"> ' .$degree_description. ' </p>';
+
+        }  
+
+        if (!empty($degree_joinnow_text) && !empty($degree_joinnow_link)){ 
+            echo '<a class="degree-joinnow" href=" '.$degree_joinnow_link.' "> ' .$degree_joinnow_text. ' </a>';
+
+        }  
+        if (!empty($degree_books_text) && !empty($degree_books_link)){ 
+            echo '<a class="degree-books" href=" '.$degree_books_link.' "> ' .$degree_books_text. ' </a>';
+
+        }  
+        if (!empty($degree_subjects_text) && !empty($degree_subjects_link)){ 
+            echo '<a class="degree-subjects" href=" '.$degree_subjects_link.' "> ' .$degree_subjects_text. ' </a>';
+
+        }  
+        if (!empty($degree_help_text) && !empty($degree_help_link)){ 
+            echo '<a class="degree-help" href=" '.$degree_help_link.' "> ' .$degree_help_text. ' </a>';
+
+        }  
+
+
+        echo $args['after_widget'];
+    }
+         
+        // Widget Backend
+    public function form($instance)
+    {
+        
+        $degree_image = !empty($instance['degree_image']) ? $instance['degree_image'] : '';
+        $degree_name = !empty($instance['degree_name']) ? $instance['degree_name'] : '';
+        $degree_description = !empty($instance['degree_description']) ? $instance['degree_description'] : '';
+        $degree_joinnow_text = !empty($instance['degree_joinnow_text']) ? $instance['degree_joinnow_text'] : '';
+        $degree_joinnow_link = !empty($instance['degree_joinnow_link']) ? $instance['degree_joinnow_link'] : '';
+        $degree_help_text = !empty($instance['degree_help_text']) ? $instance['degree_help_text'] : '';
+        $degree_help_link = !empty($instance['degree_help_link']) ? $instance['degree_help_link'] : '';
+        $degree_books_text = !empty($instance['degree_books_text']) ? $instance['degree_books_text'] : '';
+        $degree_books_link = !empty($instance['degree_books_link']) ? $instance['degree_books_link'] : '';
+        $degree_subjects_link = !empty($instance['degree_subjects_link']) ? $instance['degree_subjects_link'] : '';
+        $degree_subjects_text = !empty($instance['degree_subjects_text']) ? $instance['degree_subjects_text'] : '';
+
+
+
+      
+
+    
+        // Widget admin form
+        ?>
+        <p>
+        <label for="<?php echo $this->get_field_id('degree_name'); ?>"><?php _e(' Degree Name:'); ?></label>
+        <input class="widefat" id="<?php echo $this->get_field_id('degree_name'); ?>" name="<?php echo $this->get_field_name('degree_name'); ?>" type="text" value="<?php echo esc_attr($degree_name); ?>" />
+        </p>
+
+        <p>
+        <label for="<?php echo $this->get_field_id('degree_description'); ?>"><?php _e(' Description:'); ?></label>
+        <input class="widefat" id="<?php echo $this->get_field_id('degree_description'); ?>" name="<?php echo $this->get_field_name('degree_description'); ?>" type="text" value="<?php echo esc_attr($degree_description); ?>" />
+        </p>
+
+        <p>
+        <label for="<?php echo $this->get_field_id('degree_joinnow_text'); ?>"><?php _e(' Join now Text:'); ?></label>
+        <input class="widefat" id="<?php echo $this->get_field_id('degree_joinnow_text'); ?>" name="<?php echo $this->get_field_name('degree_joinnow_text'); ?>" type="text" value="<?php echo esc_attr($degree_joinnow_text); ?>" />
+        </p>
+
+           <p>
+        <label for="<?php echo $this->get_field_id('degree_joinnow_link'); ?>"><?php _e(' Join now text Link:'); ?></label>
+        <input class="widefat" id="<?php echo $this->get_field_id('degree_joinnow_link'); ?>" name="<?php echo $this->get_field_name('degree_joinnow_link'); ?>" type="text" value="<?php echo esc_attr($degree_joinnow_link); ?>" />
+        </p>
+
+        <p>
+        <label for="<?php echo $this->get_field_id('degree_help_text'); ?>"><?php _e(' Help Text:'); ?></label>
+        <input class="widefat" id="<?php echo $this->get_field_id('degree_help_text'); ?>" name="<?php echo $this->get_field_name('degree_help_text'); ?>" type="text" value="<?php echo esc_attr($degree_help_text); ?>" />
+        </p>
+
+        <p>
+        <label for="<?php echo $this->get_field_id('degree_help_link'); ?>"><?php _e(' Help Link:'); ?></label>
+        <input class="widefat" id="<?php echo $this->get_field_id('degree_help_link'); ?>" name="<?php echo $this->get_field_name('degree_help_link'); ?>" type="text" value="<?php echo esc_attr($degree_help_link); ?>" />
+        </p>
+
+           <p>
+        <label for="<?php echo $this->get_field_id('degree_books_text'); ?>"><?php _e(' Books Text:'); ?></label>
+        <input class="widefat" id="<?php echo $this->get_field_id('degree_books_text'); ?>" name="<?php echo $this->get_field_name('degree_books_text'); ?>" type="text" value="<?php echo esc_attr($degree_books_text); ?>" />
+        </p>
+
+        <p>
+        <label for="<?php echo $this->get_field_id('degree_books_link'); ?>"><?php _e(' Books Link:'); ?></label>
+        <input class="widefat" id="<?php echo $this->get_field_id('degree_books_link'); ?>" name="<?php echo $this->get_field_name('degree_books_link'); ?>" type="text" value="<?php echo esc_attr($degree_books_link); ?>" />
+        </p>
+
+        <p>
+        <label for="<?php echo $this->get_field_id('degree_subjects_link'); ?>"><?php _e(' Subjects Link:'); ?></label>
+        <input class="widefat" id="<?php echo $this->get_field_id('degree_subjects_link'); ?>" name="<?php echo $this->get_field_name('degree_subjects_link'); ?>" type="text" value="<?php echo esc_attr($degree_subjects_link); ?>" />
+        </p>
+
+         <p>
+        <label for="<?php echo $this->get_field_id('degree_subjects_text'); ?>"><?php _e(' Subjects Text:'); ?></label>
+        <input class="widefat" id="<?php echo $this->get_field_id('degree_subjects_text'); ?>" name="<?php echo $this->get_field_name('degree_subjects_text'); ?>" type="text" value="<?php echo esc_attr($degree_subjects_text); ?>" />
+        </p>
+
+
+        <p>
+	        <label for="<?php echo esc_attr($this->get_field_id('degree_image')); ?>"><?php esc_attr_e('Image:', 'ElegantWUni'); ?></label> 
+		    <input class="widefat image-upload" id="<?php echo esc_attr($this->get_field_id('degree_image')); ?>" name="<?php echo esc_attr($this->get_field_name('degree_image')); ?>" type="text" value="<?php echo esc_url($degree_image); ?>">
+		    <button type="button" class="button button-primary js-image-upload">Select Image</button>
+	    </p>
+
+    
+        
+
+        
+        <?php
+
+    }
+         
+        // Updating widget replacing old instances with new
+    public function update($new_instance, $old_instance)
+    {
+        $instance = array();
+        $instance['degree_image'] = (!empty($new_instance['degree_image'])) ? strip_tags($new_instance['degree_image']) : '';
+        $instance['degree_name'] = (!empty($new_instance['degree_name'])) ? strip_tags($new_instance['degree_name']) : '';
+        $instance['degree_description'] = (!empty($new_instance['degree_description'])) ? strip_tags($new_instance['degree_description']) : '';
+        $instance['degree_joinnow_text'] = (!empty($new_instance['degree_joinnow_text'])) ? strip_tags($new_instance['degree_joinnow_text']) : '';
+        $instance['degree_joinnow_link'] = (!empty($new_instance['degree_joinnow_link'])) ? strip_tags($new_instance['degree_joinnow_link']) : '';
+        $instance['degree_help_text'] = (!empty($new_instance['degree_help_text'])) ? strip_tags($new_instance['degree_help_text']) : '';
+        $instance['degree_help_link'] = (!empty($new_instance['degree_help_link'])) ? strip_tags($new_instance['degree_help_link']) : '';
+        $instance['degree_books_text'] = (!empty($new_instance['degree_books_text'])) ? strip_tags($new_instance['degree_books_text']) : '';
+        $instance['degree_books_link'] = (!empty($new_instance['degree_books_link'])) ? strip_tags($new_instance['degree_books_link']) : '';
+        $instance['degree_subjects_link'] = (!empty($new_instance['degree_subjects_link'])) ? strip_tags($new_instance['degree_subjects_link']) : '';
+        $instance['degree_subjects_text'] = (!empty($new_instance['degree_subjects_text'])) ? strip_tags($new_instance['degree_subjects_text']) : '';
+
+
+
+
+        return $instance;
+    }
+         
+        // Class wpb_widget ends here
+} 
+         
+        // Register and load the widget
+function ewt_display_enrollnow_page_degree_widget()
+{
+    register_widget('ewt_Enrollnow_page_degree');
+}
+add_action('widgets_init', 'ewt_display_enrollnow_page_degree_widget');
 
 
 

@@ -5,49 +5,14 @@
             <div class="hero-wrapper">
                 <div class="swiper hero-swiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="hero-image">
-                                <img src="<?php echo get_template_directory_uri() . '/assets/image/hero-one.png' ?>"   alt="">
-                            </div>
-                            <div class="hero-text">
-                                <h1> ආයුබෝවන්
+                        
+                        
+                    <?php if (is_active_sidebar('ewt-front-page-slider-sidebar-widget')) : ?>
+                        
+                        <?php dynamic_sidebar('ewt-front-page-slider-sidebar-widget'); ?>
 
-                                </h1>
-                                <p>
-                                අපේ වෙබ් අඩවියට ඔබ සාදරයෙන් පිලිගනිමු
-                                </p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="hero-image">
-                                <img src="<?php echo get_template_directory_uri() . '/assets/image/hero-two.png' ?>"     alt="">
-                            </div>
-                            <div class="hero-text">
-                                <h1>
-                                    <a class="hero-pic-btns" href="./buy-books">Order now</a>
+                     <?php endif; ?>
 
-                                </h1>
-                                <p>
-                                බාහිර උපාදිය සදහා සටහන් ලබා ගැනීමට
-
-
-                                </p>
-
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="hero-image">
-                                <img src="<?php echo get_template_directory_uri() . '/assets/image/hero-three.png' ?>"   alt="">
-                            </div>
-                            <div class="hero-text">
-                                <h1>
-                                <a class="hero-pic-btns" href="<?php echo home_url();?>/join-our-whatsapp">  Join now </a>
-                                </h1>
-                                <p>
-                                අපගේ Whatapp සමූහයන් හා එක් වන්න 
-                                </p>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="hero-arrows">
@@ -69,40 +34,92 @@
 
         </div>
 
-        <div id="other-commiunities" class="badges-section">
-            <div class="badger-wrapper">
-                <div class="badgers-text grey-letters">
-                    Our commiunities
-
+        <div class="quick-links-section">
+            <div class="quick-links-section-wrapper">
+                <div class="quick-link-left">
+                   <div class="quick-link-icon">
+                   <i class="fa-solid fa-address-card"></i>
+                   </div>
+                   <div class="quick-link-texts">
+                   <a href="#">
+                        <h3>Register Now</h3>
+                        <div class="quick-text-description">
+                            <p>ඕනෑම පාඨමාලාවකට ලියාපදිංචි වීමට</p>
+                        </div>
+                    </a>
+                   </div>
                 </div>
-                <div class="badgers-images">
-                    <div class="badger-one">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/image/row-one.png' ?>" alt="">
+                <div class="quick-link-middle">
+                    <div class="quick-link-icon">
+                         <i class="fa-solid fa-user"></i>
+                   </div>
+                   <div class="quick-link-texts">
+                   <a href="#">
+                        <h3>Stdent Profile</h3>
+                        <div class="quick-text-description">
+                            <p>ඉගෙනීම ආරම්භ කිරීම සදහා</p>
+                        </div>
+                    </a>    
+                   </div>
+                </div>
+                <div class="quick-link-right">
+                    <div class="quick-link-icon">
+                        <i class="fa-solid fa-dollar-sign"></i> 
                     </div>
-                    <div class="badger-one">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/image/row-two.png' ?>" alt="">
-                    </div>
-
-                    <div class="badger-one">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/image/row-three.png' ?>" alt="">
-                    </div>
-
-                    <div class="badger-one">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/image/row-four.png' ?>" alt="">
-                    </div>
-
-                    <div class="badger-one">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/image/row-five.png' ?>" alt="">
-                    </div>
-
-                    <div class="badger-one">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/image/row-six.jpg' ?>" alt="">
-                    </div>
-
-
+                   <div class="quick-link-texts">
+                    <a href="#">
+                        <h3>For Payments</h3>
+                        <div class="quick-text-description">
+                            <p>ගෙවීම් යාවත්කාලීන කිරීම් සදහා</p>
+                        </div>
+                    </a>  
+                   </div>
                 </div>
             </div>
         </div>
+         <div class="more-info-section">
+            <div class="more-info-wrapper">
+                <div class="more-info-left">
+                    <div class="more-info-logo">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/image/logo.png' ?>" alt="">
+                    </div>
+                    <h1>
+                        Upskill your team with Us
+
+                    </h1>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-circle"></i>
+                            Unlimited access to 30 lecture programmes,all online!
+
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-circle"></i>
+                           More than  2800 students island wide
+
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-circle"></i>
+                            11 qualified lectures
+
+                        </li>
+                    </ul>
+                    <div class="more-info-buttons">
+                        <div class="more-info-left-btn dark-btn">
+                          <a class="div-to-a" href="./our-courses">  Enroll Now </a>
+                        </div>
+                        <div class="more-info-right-btn explore-btn">
+                        <a class="div-to-a" href="./about-us">   Learn More </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="more-info-right">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/image/more-info.jpg' ?>" alt="">
+                </div>
+            </div>
+        </div>
+
         <div id="youtube-playlist" class="courses-section">
             <div class="courses-wrapper">
                 <div class="courses-text">
@@ -303,48 +320,7 @@
                 </div>
             </div>
         </div>
-        <div class="more-info-section">
-            <div class="more-info-wrapper">
-                <div class="more-info-left">
-                    <div class="more-info-logo">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/image/logo.png' ?>" alt="">
-                    </div>
-                    <h1>
-                        Upskill your team with Us
-
-                    </h1>
-                    <ul>
-                        <li>
-                            <i class="fa-solid fa-circle"></i>
-                            Unlimited access to 30 lecture programmes,all online!
-
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-circle"></i>
-                           More than  2800 students island wide
-
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-circle"></i>
-                            11 qualified lectures
-
-                        </li>
-                    </ul>
-                    <div class="more-info-buttons">
-                        <div class="more-info-left-btn dark-btn">
-                          <a class="div-to-a" href="./our-courses">  Enroll Now </a>
-                        </div>
-                        <div class="more-info-right-btn explore-btn">
-                        <a class="div-to-a" href="./about-us">   Learn More </a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="more-info-right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/image/more-info.jpg' ?>" alt="">
-                </div>
-            </div>
-        </div>
+ 
         <div class="team-section">
             <div class="team-wrapper">
                 <div class="swiper-container">
@@ -397,6 +373,40 @@
                     <div class="start-teaching-btn dark-btn">
                       <a href="./join-our-team">  Start teaching today </a>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div id="other-commiunities" class="badges-section">
+            <div class="badger-wrapper">
+                <div class="badgers-text grey-letters">
+                    Our commiunities
+
+                </div>
+                <div class="badgers-images">
+                    <div class="badger-one">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/image/row-one.png' ?>" alt="">
+                    </div>
+                    <div class="badger-one">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/image/row-two.png' ?>" alt="">
+                    </div>
+
+                    <div class="badger-one">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/image/row-three.png' ?>" alt="">
+                    </div>
+
+                    <div class="badger-one">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/image/row-four.png' ?>" alt="">
+                    </div>
+
+                    <div class="badger-one">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/image/row-five.png' ?>" alt="">
+                    </div>
+
+                    <div class="badger-one">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/image/row-six.jpg' ?>" alt="">
+                    </div>
+
+
                 </div>
             </div>
         </div>

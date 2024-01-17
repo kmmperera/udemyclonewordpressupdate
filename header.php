@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    
     <?php wp_head(); ?>
 </head>
 <body>
@@ -34,9 +34,7 @@
 
                <?php get_search_form(); ?>
             </div>
-            <div class="header-one grey-letters">
-               <a href="./join-our-team"> Teach on gaqkelaniya </a>
-            </div>
+           
             <div class="header-two">
                 <span>
                     <i class="fa-solid fa-phone grey-letters"></i>
